@@ -1,147 +1,144 @@
 <template>
-  <head>
-    <title>Alessandro's Portfolio</title>
-    <svg display="none">
-      <defs>
-        <path d="M 0 3 L 0 -3 L -30 0 L 0 3" id="triangle"></path>
-        <circle
-          class="outer-circle"
-          r="30px"
-          cx="50%"
-          cy="100%"
-          id="outer-circle"
-        ></circle>
-        <circle
-          class="inner-circle"
-          r="20px"
-          cx="50%"
-          cy="100%"
-          id="inner-circle"
-        ></circle>
-        <circle
-          class="education-circle"
-          r="20px"
-          cx="50%"
-          cy="25%"
-          id="education-circle"
-        ></circle>
-        <circle
-          class="education-circle-pulse"
-          r="30px"
-          cx="50%"
-          cy="25%"
-          id="education-circle-pulse"
-        ></circle>
-        <rect
-          class="connecting-line"
-          height="2px"
-          width="50%"
-          id="line-forward"
-          x="50%"
-          y="25%"
-        ></rect>
-        <rect
-          class="connecting-line"
-          height="2px"
-          width="50%"
-          id="line-backward"
-          x="0"
-          y="25%"
-        ></rect>
-        <rect
-          class="connecting-line"
-          height="2px"
-          width="25%"
-          id="line-start"
-          x="25%"
-          y="25%"
-        ></rect>
-        <rect
-          class="connecting-line"
-          height="2px"
-          width="25%"
-          id="line-end"
-          x="50%"
-          y="25%"
-        ></rect>
-      </defs>
-    </svg>
-  </head>
-  <!-- Navigation Bar -->
-  <header class="navbar grid header-primary">
-    <div class="mouse-pointer">
-      <p class="burger">&#9776;</p>
-    </div>
-    <div>
-      <p class="cursor-blink-effect">Alessandro's Portfolio</p>
-    </div>
-    <div>
-      <img class="logo" src="../../assets/Logo.png" />
-    </div>
-  </header>
-
-  <!-- Hidden Bar -->
-  <nav class="nav-primary">
-    <ul>
-      <li>
-        <a class="mouse-pointer" onclick="scrollToPage(0,false)">Know Me</a>
-      </li>
-      <li>
-        <a class="mouse-pointer" onclick="scrollToPage(1,false)">Projects</a>
-      </li>
-      <li>
-        <a class="mouse-pointer" onclick="scrollToPage(2,false)">Experience</a>
-      </li>
-      <li>
-        <a class="mouse-pointer" onclick="scrollToPage(3,false)">My Skills</a>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- Content -->
-  <section class="main-container flex-vertical">
-    <section class="filler"></section>
-    <!-- Presentation -->
-    <section class="presentation grid scrolling-slide">
-      <div class="flex-centered">
-        <img class="portrait" src="../../assets/alessandro.png" />
+  <div class="theme-primary">
+    <head>
+      <title>Alessandro's Portfolio</title>
+      <svg display="none">
+        <defs>
+          <path d="M 0 3 L 0 -3 L -30 0 L 0 3" id="triangle"></path>
+          <circle
+            class="outer-circle"
+            r="30px"
+            cx="50%"
+            cy="100%"
+            id="outer-circle"
+          ></circle>
+          <circle
+            class="inner-circle"
+            r="20px"
+            cx="50%"
+            cy="100%"
+            id="inner-circle"
+          ></circle>
+          <circle
+            class="education-circle"
+            r="20px"
+            cx="50%"
+            cy="25%"
+            id="education-circle"
+          ></circle>
+          <circle
+            class="education-circle-outer"
+            r="30px"
+            cx="50%"
+            cy="25%"
+            id="education-circle-outer"
+          ></circle>
+          <rect
+            class="connecting-line"
+            height="2px"
+            width="50%"
+            id="line-forward"
+            x="50%"
+            y="25%"
+          ></rect>
+          <rect
+            class="connecting-line"
+            height="2px"
+            width="50%"
+            id="line-backward"
+            x="0"
+            y="25%"
+          ></rect>
+          <rect
+            class="connecting-line"
+            height="2px"
+            width="25%"
+            id="line-start"
+            x="25%"
+            y="25%"
+          ></rect>
+          <rect
+            class="connecting-line"
+            height="2px"
+            width="25%"
+            id="line-end"
+            x="50%"
+            y="25%"
+          ></rect>
+        </defs>
+      </svg>
+    </head>
+    <!-- Navigation Bar -->
+    <header class="navbar grid">
+      <div class="mouse-pointer">
+        <p class="burger">&#9776;</p>
       </div>
-      <div class="flex-centered flex-vertical">
-        <p class="job-title">Java developer</p>
-        <p class="divisor"></p>
-        <p class="nowrap-text">
-          Specialized in Java development and able to use the Spring Framework
-          (Boot , Security, Data, Batch, Web).
-        </p>
-        <p class="nowrap-text">
-          Skilled with relational database management and interpretation
-          (Oracle, MSSQL, MySQL).
-        </p>
-        <p class="nowrap-text">Familiarity with front-end development.</p>
-        <p class="nowrap-text">
-          Familiarity with Git , Atlassian tools, and Jenkins.
-        </p>
-        <p class="divisor"></p>
-        <div class="button-group">
-          <button
-            class="button-primary"
-            onclick="location.href='mailTo://alessandrorosmarino@gmail.com'"
-          >
-            Contact Me
-          </button>
-          <button class="button-primary" onclick="scrollToPage(1,false)">
-            My Projects
-          </button>
-          <button
-            class="button-primary"
-            onclick="location.href='../../assets/Alessandro%20Rosmarino%20CV.pdf'"
-          >
-            Download my CV
-          </button>
+      <div>
+        <p class="cursor-blink-effect">Alessandro's Portfolio</p>
+      </div>
+      <div>
+        <img class="logo" src="../../assets/Logo.png" />
+      </div>
+    </header>
+
+    <!-- Hidden Bar -->
+    <nav class="portfolio-nav">
+      <ul>
+        <li>
+          <a class="mouse-pointer" v-on:click="script(0, false)">Know Me</a>
+        </li>
+        <li>
+          <a class="mouse-pointer" v-on:click="script(1, false)">Projects</a>
+        </li>
+        <li>
+          <a class="mouse-pointer" v-on:click="script(2, false)">Experience</a>
+        </li>
+        <li>
+          <a class="mouse-pointer" v-on:click="script(3, false)">My Skills</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Content -->
+    <section class="main-container flex-vertical">
+      <section class="filler"></section>
+      <!-- Presentation -->
+      <section class="presentation grid scrolling-slide">
+        <div class="flex-centered">
+          <img class="portrait" src="../../assets/alessandro.png" />
         </div>
-      </div>
-    </section>
-    <!--
+        <div class="flex-centered flex-vertical">
+          <p class="job-title">Java developer</p>
+          <p class="divisor"></p>
+          <p class="nowrap-text">
+            Specialized in Java development and able to use the Spring Framework
+            (Boot , Security, Data, Batch, Web).
+          </p>
+          <p class="nowrap-text">
+            Skilled with relational database management and interpretation
+            (Oracle, MSSQL, MySQL).
+          </p>
+          <p class="nowrap-text">Familiarity with front-end development.</p>
+          <p class="nowrap-text">
+            Familiarity with Git , Atlassian tools, and Jenkins.
+          </p>
+          <p class="divisor"></p>
+          <div class="button-group">
+            <button
+              onclick="location.href='mailTo://alessandrorosmarino@gmail.com'"
+            >
+              Contact Me
+            </button>
+            <button onclick="scrollToPage(1,false)">My Projects</button>
+            <button
+              onclick="location.href='../../assets/Alessandro%20Rosmarino%20CV.pdf'"
+            >
+              Download my CV
+            </button>
+          </div>
+        </div>
+      </section>
+      <!--
     <section class="slideshow grid tri-column single-row" >
         <div class="previous-button flex centered"><</div>
         <div class="flex vertical-direction">
@@ -167,381 +164,232 @@
         <div class="next-button flex centered">></div>
     </section>
     -->
-    <!-- Projects -->
-    <section class="project-table grid scrolling-slide">
-      <a
-        href="https://github.com/alessandrorosmarino/Play-Performance"
-        target="_blank"
-        class="flex-vertical flex-centered fade-in-side-lines-primary"
-      >
-        <div class="flex-centered flex-vertical">
-          <p class="title">Play Performance</p>
-          <div class="playPerformance-technologies technology-group grid">
-            <div></div>
-            <img class="technology" src="../../assets/java.png" />
-            <img class="technology" src="../../assets/spring.svg" />
-            <img class="technology" src="../../assets/mySQL.png" />
-            <img class="technology" src="../../assets/angular.png" />
-            <img class="technology" src="../../assets/html.png" />
-            <img class="technology" src="../../assets/css.png" />
-            <img class="technology" src="../../assets/js.png" />
-            <div></div>
+      <!-- Projects -->
+      <section class="project-table grid scrolling-slide">
+        <a
+          href="https://github.com/alessandrorosmarino/Play-Performance"
+          target="_blank"
+          class="flex-vertical flex-centered fade-in-side-lines"
+        >
+          <div class="flex-centered flex-vertical">
+            <p class="title">Play Performance</p>
+            <div class="playPerformance-technologies technology-group grid">
+              <div></div>
+              <img class="technology" src="../../assets/java.png" />
+              <img class="technology" src="../../assets/spring.svg" />
+              <img class="technology" src="../../assets/mySQL.png" />
+              <img class="technology" src="../../assets/angular.png" />
+              <img class="technology" src="../../assets/html.png" />
+              <img class="technology" src="../../assets/css.png" />
+              <img class="technology" src="../../assets/js.png" />
+              <div></div>
+            </div>
+          </div>
+          <p class="typingEffect nowrap-text goToProject">> Go to project!</p>
+        </a>
+        <a
+          href="https://github.com/alessandrorosmarino/Wrapper"
+          target="_blank"
+          class="flex-vertical flex-centered fade-in-side-lines"
+        >
+          <div class="flex-centered flex-vertical">
+            <p class="title">Dependency Injector</p>
+            <div class="dependencyInjector-technologies technology-group grid">
+              <div></div>
+              <img class="technology" src="../../assets/java.png" />
+              <div></div>
+            </div>
+          </div>
+          <p class="typingEffect nowrap-text goToProject">> Go to project!</p>
+        </a>
+        <a
+          href="https://github.com/alessandrorosmarino/portfolio"
+          target="_blank"
+          class="flex-vertical flex-centered fade-in-side-lines"
+        >
+          <div class="flex-centered flex-vertical">
+            <p class="title">Portfolio</p>
+            <div class="portfolio-technologies technology-group grid">
+              <div></div>
+              <img class="technology" src="../../assets/html.png" />
+              <img class="technology" src="../../assets/css.png" />
+              <img class="technology" src="../../assets/js.png" />
+              <div></div>
+            </div>
+          </div>
+          <p class="typingEffect nowrap-text goToProject">> Go to project!</p>
+        </a>
+      </section>
+
+      <!-- Working Experience -->
+      <section class="working-experience grid scrolling-slide">
+        <div class="working-experience-left grid">
+          <div class="flex-centered">
+            <img
+              class="working-experience-image"
+              src="https://via.placeholder.com/355x200"
+            />
+          </div>
+          <div class="flex-centered flex-vertical">
+            <p class="work-title">LMS & Mobile App</p>
+            <p class="work-description">
+              In this project I worked for a big Italian Automotive company
+              developing web pages, backend logic and REST webservices of an
+              LMS....
+            </p>
           </div>
         </div>
-        <p class="typingEffect nowrap-text goToProject">> Go to project!</p>
-      </a>
-      <a
-        href="https://github.com/alessandrorosmarino/Wrapper"
-        target="_blank"
-        class="flex-vertical flex-centered fade-in-side-lines-primary"
-      >
-        <div class="flex-centered flex-vertical">
-          <p class="title">Dependency Injector</p>
-          <div class="dependencyInjector-technologies technology-group grid">
-            <div></div>
-            <img class="technology" src="../../assets/java.png" />
-            <div></div>
+        <div class="working-experience-right grid">
+          <div class="flex-centered flex-vertical">
+            <p class="work-title">Front-End development</p>
+            <p class="work-description">
+              In this project I worked for a banking company developing web
+              pages....
+            </p>
+          </div>
+          <div class="flex-centered">
+            <img
+              class="working-experience-image"
+              src="https://via.placeholder.com/355x200"
+            />
           </div>
         </div>
-        <p class="typingEffect nowrap-text goToProject">> Go to project!</p>
-      </a>
-      <a
-        href="https://github.com/alessandrorosmarino/portfolio"
-        target="_blank"
-        class="flex-vertical flex-centered fade-in-side-lines-primary"
-      >
-        <div class="flex-centered flex-vertical">
-          <p class="title">Portfolio</p>
-          <div class="portfolio-technologies technology-group grid">
-            <div></div>
-            <img class="technology" src="../../assets/html.png" />
-            <img class="technology" src="../../assets/css.png" />
-            <img class="technology" src="../../assets/js.png" />
-            <div></div>
+        <div class="working-experience-left grid">
+          <div class="flex-centered">
+            <img
+              class="working-experience-image"
+              src="https://via.placeholder.com/355x200"
+            />
+          </div>
+          <div class="flex-centered flex-vertical">
+            <p class="work-title">Back-End development</p>
+            <p class="work-description">
+              In this project I developed web pages, backend logic....
+            </p>
           </div>
         </div>
-        <p class="typingEffect nowrap-text goToProject">> Go to project!</p>
-      </a>
-    </section>
+      </section>
 
-    <!-- Working Experience -->
-    <section class="working-experience grid scrolling-slide">
-      <div class="working-experience-left grid">
-        <div class="flex-centered">
-          <img
-            class="working-experience-image"
-            src="https://via.placeholder.com/355x200"
-          />
+      <!-- Skills -->
+      <section class="skills grid scrolling-slide">
+        <div></div>
+        <div class="progress-bar development">
+          <svg><use xlink:href="#outer-circle"></use></svg>
+          <svg><use xlink:href="#inner-circle"></use></svg>
+          <div class="pointer-container flex-centered">
+            <svg class="pointer-svg">
+              <use class="pointer" xlink:href="#triangle" x="50%" y="50%"></use>
+            </svg>
+          </div>
+          <p class="skill-text title">Software Development</p>
         </div>
-        <div class="flex-centered flex-vertical">
-          <p class="work-title">LMS & Mobile App</p>
-          <p class="work-description">
-            In this project I worked for a big Italian Automotive company
-            developing web pages, backend logic and REST webservices of an
-            LMS....
-          </p>
+        <div class="progress-bar problem-solving">
+          <svg><use xlink:href="#outer-circle"></use></svg>
+          <svg><use xlink:href="#inner-circle"></use></svg>
+          <div class="pointer-container flex-centered">
+            <svg class="pointer-svg">
+              <use class="pointer" xlink:href="#triangle" x="50%" y="50%"></use>
+            </svg>
+          </div>
+          <p class="skill-text title">Problem Solving</p>
         </div>
-      </div>
-      <div class="working-experience-right grid">
-        <div class="flex-centered flex-vertical">
-          <p class="work-title">Front-End development</p>
-          <p class="work-description">
-            In this project I worked for a banking company developing web
-            pages....
-          </p>
+        <div class="progress-bar learning">
+          <svg><use xlink:href="#outer-circle"></use></svg>
+          <svg><use xlink:href="#inner-circle"></use></svg>
+          <div class="pointer-container flex-centered">
+            <svg class="pointer-svg">
+              <use class="pointer" xlink:href="#triangle" x="50%" y="50%"></use>
+            </svg>
+          </div>
+          <p class="skill-text title">Quick Learning</p>
         </div>
-        <div class="flex-centered">
-          <img
-            class="working-experience-image"
-            src="https://via.placeholder.com/355x200"
-          />
+        <div class="progress-bar adaptivity">
+          <svg><use xlink:href="#outer-circle"></use></svg>
+          <svg><use xlink:href="#inner-circle"></use></svg>
+          <div class="pointer-container flex-centered">
+            <svg class="pointer-svg">
+              <use class="pointer" xlink:href="#triangle" x="50%" y="50%"></use>
+            </svg>
+          </div>
+          <p class="skill-text title">Adaptivity</p>
         </div>
-      </div>
-      <div class="working-experience-left grid">
-        <div class="flex-centered">
-          <img
-            class="working-experience-image"
-            src="https://via.placeholder.com/355x200"
-          />
+        <div class="progress-bar team">
+          <svg><use xlink:href="#outer-circle"></use></svg>
+          <svg><use xlink:href="#inner-circle"></use></svg>
+          <div class="pointer-container flex-centered">
+            <svg class="pointer-svg">
+              <use class="pointer" xlink:href="#triangle" x="50%" y="50%"></use>
+            </svg>
+          </div>
+          <p class="skill-text title">Team Working</p>
         </div>
-        <div class="flex-centered flex-vertical">
-          <p class="work-title">Back-End development</p>
-          <p class="work-description">
-            In this project I developed web pages, backend logic....
-          </p>
+        <div class="progress-bar analysis">
+          <svg><use xlink:href="#outer-circle"></use></svg>
+          <svg><use xlink:href="#inner-circle"></use></svg>
+          <div class="pointer-container flex-centered">
+            <svg class="pointer-svg">
+              <use class="pointer" xlink:href="#triangle" x="50%" y="50%"></use>
+            </svg>
+          </div>
+          <p class="skill-text title">Analysis</p>
         </div>
-      </div>
-    </section>
+        <div></div>
+      </section>
 
-    <!-- Skills -->
-    <section class="skills grid scrolling-slide">
-      <div></div>
-      <div class="progress-bar development">
-        <svg><use xlink:href="#outer-circle"></use></svg>
-        <svg><use xlink:href="#inner-circle"></use></svg>
-        <div class="pointer-container flex-centered">
-          <svg class="pointer-svg">
-            <use class="pointer" xlink:href="#triangle" x="50%" y="50%"></use>
+      <!-- Education -->
+      <section class="education grid">
+        <div class="flex-centered education-container">
+          <p class="education-text flex-centered">
+            Diploma in Computer Science, Technology and Telecommunications
+          </p>
+          <svg>
+            <use xlink:href="#line-start"></use>
+            <use xlink:href="#education-circle"></use>
+            <use xlink:href="#line-forward"></use>
           </svg>
         </div>
-        <p class="skill-text title">Software Development</p>
-      </div>
-      <div class="progress-bar problem-solving">
-        <svg><use xlink:href="#outer-circle"></use></svg>
-        <svg><use xlink:href="#inner-circle"></use></svg>
-        <div class="pointer-container flex-centered">
-          <svg class="pointer-svg">
-            <use class="pointer" xlink:href="#triangle" x="50%" y="50%"></use>
+        <div class="flex-centered education-container">
+          <p class="education-text flex-centered">Java specialization course</p>
+          <svg>
+            <use xlink:href="#line-backward"></use>
+            <use xlink:href="#education-circle"></use>
+            <use xlink:href="#line-forward"></use>
           </svg>
         </div>
-        <p class="skill-text title">Problem Solving</p>
-      </div>
-      <div class="progress-bar learning">
-        <svg><use xlink:href="#outer-circle"></use></svg>
-        <svg><use xlink:href="#inner-circle"></use></svg>
-        <div class="pointer-container flex-centered">
-          <svg class="pointer-svg">
-            <use class="pointer" xlink:href="#triangle" x="50%" y="50%"></use>
+        <div class="flex-centered education-container">
+          <p class="education-text flex-centered">
+            Bachelor's degree in Information & Communication Technologies
+          </p>
+          <svg>
+            <use xlink:href="#line-backward"></use>
+            <use xlink:href="#education-circle"></use>
+            <use xlink:href="#line-forward"></use>
           </svg>
         </div>
-        <p class="skill-text title">Quick Learning</p>
-      </div>
-      <div class="progress-bar adaptivity">
-        <svg><use xlink:href="#outer-circle"></use></svg>
-        <svg><use xlink:href="#inner-circle"></use></svg>
-        <div class="pointer-container flex-centered">
-          <svg class="pointer-svg">
-            <use class="pointer" xlink:href="#triangle" x="50%" y="50%"></use>
+        <div class="flex-centered education-container">
+          <p class="education-text flex-centered">
+            Continuous formation and self-improvement
+          </p>
+          <svg>
+            <use xlink:href="#education-circle-outer" class="pulse"></use>
+            <use xlink:href="#line-backward"></use>
+            <use xlink:href="#education-circle"></use>
+            <use xlink:href="#line-end"></use>
           </svg>
         </div>
-        <p class="skill-text title">Adaptivity</p>
-      </div>
-      <div class="progress-bar team">
-        <svg><use xlink:href="#outer-circle"></use></svg>
-        <svg><use xlink:href="#inner-circle"></use></svg>
-        <div class="pointer-container flex-centered">
-          <svg class="pointer-svg">
-            <use class="pointer" xlink:href="#triangle" x="50%" y="50%"></use>
-          </svg>
-        </div>
-        <p class="skill-text title">Team Working</p>
-      </div>
-      <div class="progress-bar analysis">
-        <svg><use xlink:href="#outer-circle"></use></svg>
-        <svg><use xlink:href="#inner-circle"></use></svg>
-        <div class="pointer-container flex-centered">
-          <svg class="pointer-svg">
-            <use class="pointer" xlink:href="#triangle" x="50%" y="50%"></use>
-          </svg>
-        </div>
-        <p class="skill-text title">Analysis</p>
-      </div>
-      <div></div>
+      </section>
     </section>
-
-    <!-- Education -->
-    <section class="education grid">
-      <div class="flex-centered education-container">
-        <p class="education-text flex-centered">
-          Diploma in Computer Science, Technology and Telecommunications
-        </p>
-        <svg>
-          <use xlink:href="#line-start"></use>
-          <use xlink:href="#education-circle"></use>
-          <use xlink:href="#line-forward"></use>
-        </svg>
-      </div>
-      <div class="flex-centered education-container">
-        <p class="education-text flex-centered">Java specialization course</p>
-        <svg>
-          <use xlink:href="#line-backward"></use>
-          <use xlink:href="#education-circle"></use>
-          <use xlink:href="#line-forward"></use>
-        </svg>
-      </div>
-      <div class="flex-centered education-container">
-        <p class="education-text flex-centered">
-          Bachelor's degree in Information & Communication Technologies
-        </p>
-        <svg>
-          <use xlink:href="#line-backward"></use>
-          <use xlink:href="#education-circle"></use>
-          <use xlink:href="#line-forward"></use>
-        </svg>
-      </div>
-      <div class="flex-centered education-container">
-        <p class="education-text flex-centered">
-          Continuous formation and self-improvement
-        </p>
-        <svg>
-          <use xlink:href="#education-circle-pulse"></use>
-          <use xlink:href="#line-backward"></use>
-          <use xlink:href="#education-circle"></use>
-          <use xlink:href="#line-end"></use>
-        </svg>
-      </div>
-    </section>
-  </section>
+  </div>
 </template>
 
 <script setup>
 import { onMounted } from "vue";
 
+let script;
 onMounted(() => {
-  let headerHeight = getComputedStyle(
-    document.documentElement
-  ).getPropertyValue("--heading-height");
-  headerHeight = headerHeight.substring(0, headerHeight.indexOf("px"));
-
-  // Script to toggle the hidden bar
-  var burger = document.querySelector(".burger");
-  var sidebar = document.querySelector("nav");
-
-  burger.addEventListener("click", function () {
-    sidebar.classList.toggle("show-nav");
+  import("../../js/util.js").then((module) => {
+    script = module.scrollToPage;
   });
-
-  // Script to perform the reverse animation only after hover
-  const fadeInEffects = document.querySelectorAll(
-    "[class*='fade-in-side-lines']"
-  );
-  for (let i = 0; i < fadeInEffects.length; i++) {
-    console.log("adding event listeners to:" + fadeInEffects[i]);
-    fadeInEffects[i].addEventListener("mouseover", () => {
-      fadeInEffects[i].classList.add("hovered");
-    });
-  }
-
-  /*
-    //Script for the slideshow behaviour
-    var prev = document.querySelector(".previous-button");
-    var next = document.querySelector(".next-button");
-    var slides = document.getElementsByClassName("slide");
-    var dots = document.getElementsByClassName("dot");
-    
-    prev.addEventListener("click", () =>{
-        nextSlide(false);
-    })
-    
-    next.addEventListener("click", () =>{
-        nextSlide(true);
-    })
-    
-    function nextSlide(direction){
-        var found = false;
-        var check = direction ? slides.length-1 : 0;
-        var index = direction ? -1 : slides.length;
-    
-        for (let i = 0; i < slides.length && !found; i++) {
-            if(slides[i].classList.contains("active")){
-                if(i === check){
-                    i = index;
-                }
-                selectSlide(direction?++i:--i);
-            }
-        }
-    }
-    
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].addEventListener("click", () =>{
-            selectSlide(i);
-        })
-    }
-    
-    function selectSlide(index){
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].classList.remove("active");
-        }
-        slides[index].classList.add("active");
-        for (let i = 0; i < dots.length; i++) {
-            dots[i].classList.remove("dot-selected");
-        }
-        dots[index].classList.add("dot-selected");
-    }
-    */
-
-  /* Start skill appearing effect */
-
-  var skills = document.querySelectorAll(".pointer-container");
-
-  const rotationObserver = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("rotate");
-      } else {
-        entry.target.classList.remove("rotate");
-      }
-    }
-  });
-  for (const skill of skills) {
-    rotationObserver.observe(skill);
-  }
-
-  /* Start scrolling effect */
-  let scrolling = false;
-  var scrollingList = [];
-  var scrollingSlides = document.querySelectorAll(".scrolling-slide");
-
-  for (const slide of scrollingSlides) {
-    scrollingList.push({ element: slide, selected: false });
-  }
-
-  const sectionObserver = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (entry.intersectionRatio >= 1) {
-        scrollingList.find((e) => e.element === entry.target).selected = true;
-      }
-    }
-  });
-
-  document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-      for (let scrollingListElement of scrollingList) {
-        sectionObserver.observe(scrollingListElement.element);
-      }
-    },
-    false
-  );
-
-  window.addEventListener("wheel", activateScrollingEffect);
-  window.addEventListener("wheel", (e) => e.preventDefault(), {
-    passive: false,
-  });
-
-  function activateScrollingEffect(e) {
-    if (!scrolling) {
-      scrollToNextSection(e.deltaY > 0);
-    }
-  }
-
-  function scrollToNextSection(forward) {
-    let elementIndexActive = scrollingList.findIndex((e) => e.selected);
-    let nextIndex = elementIndexActive + (forward ? 1 : -1);
-    scrollToPage(nextIndex, true);
-  }
-
-  function scrollToPage(index, removeListeners) {
-    if (!isOutOfBounds(scrollingList, index)) {
-      if (removeListeners) {
-        window.removeEventListener("wheel", activateScrollingEffect);
-        setTimeout(() => {
-          scrolling = false;
-          window.addEventListener("wheel", activateScrollingEffect);
-        }, 1500);
-      }
-      for (const scrollingElement of scrollingList) {
-        scrollingElement.selected = false;
-      }
-      let elementToScroll = scrollingList[index].element;
-      scrollingList[index].selected = true;
-      window.scrollTo(0, elementToScroll.offsetTop - headerHeight);
-    }
-  }
-
-  function isOutOfBounds(array, index) {
-    return index >= array.length || index < 0;
-  }
 });
 </script>
 
@@ -567,7 +415,7 @@ onMounted(() => {
 
 .main-container {
   align-items: stretch;
-  background-color: var(--background-color);
+  background-color: var(--color-contrast);
 }
 
 .filler {
@@ -595,7 +443,7 @@ onMounted(() => {
 
 .job-title {
   font-size: 4em;
-  color: var(--effect-color);
+  color: var(--color);
 }
 .project-table {
   height: var(--section-full-height-heading);
@@ -640,7 +488,7 @@ onMounted(() => {
 
 .progress-bar {
   position: relative;
-  color: var(--text-color);
+  color: var(--color);
 }
 
 .progress-bar > svg {
@@ -652,15 +500,15 @@ onMounted(() => {
 }
 
 .outer-circle {
-  fill: var(--text-color);
+  fill: var(--color);
 }
 
 .inner-circle {
-  fill: var(--background-color);
+  fill: var(--color-contrast);
 }
 
 .pointer {
-  fill: var(--effect-color);
+  fill: var(--text-color);
 }
 
 .pointer-container {
@@ -722,15 +570,11 @@ onMounted(() => {
 }
 
 .education-circle {
-  fill: var(--text-color);
+  fill: var(--color);
 }
 
-.education-circle-pulse {
-  fill: var(--background-color-light);
-}
-
-[class*="pulse"] {
-  animation: pulse 1s infinite alternate;
+.education-circle-outer {
+  fill: var(--color-contrast-hover);
 }
 
 .education-container {
@@ -754,7 +598,7 @@ onMounted(() => {
 }
 
 .connecting-line {
-  fill: var(--text-color);
+  fill: var(--color);
 }
 
 .working-experience {
@@ -782,7 +626,7 @@ onMounted(() => {
 }
 
 .work-title {
-  color: var(--effect-color);
+  color: var(--color);
   margin-bottom: var(--divisor-space);
 }
 

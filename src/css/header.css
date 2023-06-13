@@ -3,36 +3,12 @@ header{
     top: 0;
     width: 100%;
     height: var(--heading-height);
-    color: var(--text-color);
+    color: var(--color-contrast);
     z-index: 999;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: var(--text-color-contrast-hover);
-    background-color: var(--text-color-contrast);
-}
-
-.header-primary{
-    border-bottom-color: var(--primary-color-contrast);
-    background-color: var(--primary-color);
-    color: var(--primary-color-contrast);
-}
-
-.header-primary-outline{
-    border-bottom-color: var(--primary-color);
-    background-color: var(--primary-color-contrast);
-    color: var(--text-color);
-}
-
-.header-secondary{
-    border-bottom-color: var(--secondary-color-contrast);
-    background-color: var(--secondary-color);
-    color: var(--secondary-color-contrast);
-}
-
-.header-secondary-outline{
-    border-bottom-color: var(--secondary-color);
-    background-color: var(--secondary-color-contrast);
-    color: var(--text-color);
+    border-bottom-color: var(--color-contrast-hover);
+    background-color: var(--color);
 }
 
 header > div:first-of-type{

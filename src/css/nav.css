@@ -7,33 +7,9 @@ nav{
     transition: left 1s;
     border-right-width: 1px;
     border-right-style: solid;
-    border-right-color: var(--text-color-contrast-hover);
-    background-color: var(--text-color-contrast);
-    color: var(--text-color);
-}
-
-.nav-primary{
-    border-right-color: var(--primary-color-contrast);
-    background-color: var(--primary-color);
-    color: var(--primary-color-contrast);
-}
-
-.nav-primary-outline{
-    border-right-color: var(--primary-color);
-    background-color: var(--primary-color-contrast);
-    color: var(--text-color);
-}
-
-.nav-secondary{
-    border-right-color: var(--secondary-color-contrast);
-    background-color: var(--secondary-color);
-    color: var(--secondary-color-contrast);
-}
-
-.nav-secondary-outline{
-    border-right-color: var(--secondary-color);
-    background-color: var(--secondary-color-contrast);
-    color: var(--text-color);
+    border-right-color: var(--color-contrast-hover);
+    background-color: var(--color);
+    color: var(--color-contrast);
 }
 
 .show-nav{

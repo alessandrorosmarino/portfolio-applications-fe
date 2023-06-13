@@ -1,35 +1,15 @@
 /* Table */
 
 table {
-    --table-header-color: var(--text-color-contrast);
-    --table-header-background-color: var(--text-color);
-    --table-border-color: var(--text-color);
+    --table-header-color: var(--color-contrast);
+    --table-header-background-color: var(--color);
+    --table-border-color: var(--color);
     --table-body-text-color: var(--text-color);
-    --table-odd-row-background-color: var(--text-color-contrast);
-    --table-even-row-background-color: var(--text-color-contrast-hover);
-    --table-caption-color: var(--text-color);
+    --table-odd-row-background-color: var(--color-contrast);
+    --table-even-row-background-color: var(--color-contrast-hover);
+    --table-caption-color: var(--color);
     width: 100%;
     border-spacing: 0;
-}
-
-.table-primary {
-    --table-header-color: var(--text-color-contrast);
-    --table-header-background-color: var(--primary-color);
-    --table-border-color: var(--primary-color);
-    --table-body-text-color: var(--text-color);
-    --table-odd-row-background-color: var(--primary-color-contrast);
-    --table-even-row-background-color: var(--primary-color-contrast-hover);
-    --table-caption-color: var(--primary-color);
-}
-
-.table-secondary {
-    --table-header-color: var(--text-color-contrast);
-    --table-header-background-color: var(--secondary-color);
-    --table-border-color: var(--secondary-color);
-    --table-body-text-color: var(--text-color);
-    --table-odd-row-background-color: var(--secondary-color-contrast);
-    --table-even-row-background-color: var(--secondary-color-contrast-hover);
-    --table-caption-color: var(--secondary-color);
 }
 
 .table-danger {

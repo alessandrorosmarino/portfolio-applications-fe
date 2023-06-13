@@ -5,68 +5,69 @@ headerHeight = headerHeight.substring(0, headerHeight.indexOf("px"));
 
 // Script to toggle the hidden bar
 var burger = document.querySelector(".burger");
-var sidebar = document.querySelector("nav");
+var sidebar = document.querySelector(".portfolio-nav");
 
 burger.addEventListener("click", function () {
   sidebar.classList.toggle("show-nav");
 });
 
 // Script to perform the reverse animation only after hover
-var fadeInEffects = document.querySelectorAll("[class*='fade-in-side-lines']");
+const fadeInEffects = document.querySelectorAll(
+  "[class*='fade-in-side-lines']"
+);
 for (let i = 0; i < fadeInEffects.length; i++) {
-  console.log("adding event listeners to:" + fadeInEffects[i]);
   fadeInEffects[i].addEventListener("mouseover", () => {
     fadeInEffects[i].classList.add("hovered");
   });
 }
 
 /*
-//Script for the slideshow behaviour
-var prev = document.querySelector(".previous-button");
-var next = document.querySelector(".next-button");
-var slides = document.getElementsByClassName("slide");
-var dots = document.getElementsByClassName("dot");
-
-prev.addEventListener("click", () =>{
-    nextSlide(false);
-})
-
-next.addEventListener("click", () =>{
-    nextSlide(true);
-})
-
-function nextSlide(direction){
-    var found = false;
-    var check = direction ? slides.length-1 : 0;
-    var index = direction ? -1 : slides.length;
-
-    for (let i = 0; i < slides.length && !found; i++) {
-        if(slides[i].classList.contains("active")){
-            if(i === check){
-                i = index;
-            }
-            selectSlide(direction?++i:--i);
-        }
-    }
-}
-
-for (let i = 0; i < dots.length; i++) {
-    dots[i].addEventListener("click", () =>{
-        selectSlide(i);
-    })
-}
-
-function selectSlide(index){
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove("active");
-    }
-    slides[index].classList.add("active");
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].classList.remove("dot-selected");
-    }
-    dots[index].classList.add("dot-selected");
-}
-*/
+  //Script for the slideshow behaviour
+  var prev = document.querySelector(".previous-button");
+  var next = document.querySelector(".next-button");
+  var slides = document.getElementsByClassName("slide");
+  var dots = document.getElementsByClassName("dot");
+  
+  prev.addEventListener("click", () =>{
+      nextSlide(false);
+  })
+  
+  next.addEventListener("click", () =>{
+      nextSlide(true);
+  })
+  
+  function nextSlide(direction){
+      var found = false;
+      var check = direction ? slides.length-1 : 0;
+      var index = direction ? -1 : slides.length;
+  
+      for (let i = 0; i < slides.length && !found; i++) {
+          if(slides[i].classList.contains("active")){
+              if(i === check){
+                  i = index;
+              }
+              selectSlide(direction?++i:--i);
+          }
+      }
+  }
+  
+  for (let i = 0; i < dots.length; i++) {
+      dots[i].addEventListener("click", () =>{
+          selectSlide(i);
+      })
+  }
+  
+  function selectSlide(index){
+      for (let i = 0; i < slides.length; i++) {
+          slides[i].classList.remove("active");
+      }
+      slides[index].classList.add("active");
+      for (let i = 0; i < dots.length; i++) {
+          dots[i].classList.remove("dot-selected");
+      }
+      dots[index].classList.add("dot-selected");
+  }
+  */
 
 /* Start skill appearing effect */
 
@@ -113,7 +114,9 @@ document.addEventListener(
 );
 
 window.addEventListener("wheel", activateScrollingEffect);
-window.addEventListener("wheel", (e) => e.preventDefault(), { passive: false });
+window.addEventListener("wheel", (e) => e.preventDefault(), {
+  passive: false,
+});
 
 function activateScrollingEffect(e) {
   if (!scrolling) {
@@ -148,3 +151,5 @@ function scrollToPage(index, removeListeners) {
 function isOutOfBounds(array, index) {
   return index >= array.length || index < 0;
 }
+
+export { scrollToPage };

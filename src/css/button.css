@@ -1,14 +1,14 @@
 /* Buttons */
 
 button{
-    --button-text-color: var(--text-color);
-    --button-border-color: var(--text-color);
-    --button-background-color: var(--text-color-contrast);
+    --button-text-color: var(--color-contrast);
+    --button-border-color: var(--color-contrast);
+    --button-background-color: var(--color);
     --button-text-color-hover: var(--text-color);
-    --button-background-color-hover: var(--text-color-contrast-hover);
-    --button-text-color-active: var(--text-color-contrast);
-    --button-border-color-active: var(--text-color-contrast);
-    --button-background-color-active: var(--text-color);
+    --button-background-color-hover: var(--color-contrast-hover);
+    --button-text-color-active: var(--text-color);
+    --button-border-color-active: var(--text-color);
+    --button-background-color-active: var(--color-contrast);
 
     border: 1px solid var(--button-border-color);
     background-color: var(--button-background-color);
@@ -31,50 +31,6 @@ button:active{
     background-color: var(--button-background-color-active);
     color: var(--button-text-color-active);
     border-color: var(--button-border-color-active);
-}
-
-.button-primary{
-    --button-text-color: var(--primary-color-contrast);
-    --button-border-color: var(--primary-color-contrast);
-    --button-background-color: var(--primary-color);
-    --button-text-color-hover: var(--text-color);
-    --button-background-color-hover: var(--primary-color-contrast-hover);
-    --button-text-color-active: var(--text-color);
-    --button-border-color-active: var(--text-color);
-    --button-background-color-active: var(--primary-color-contrast);
-}
-
-.button-primary-outline{
-    --button-text-color: var(--text-color);
-    --button-border-color: var(--text-color);
-    --button-background-color: var(--primary-color-contrast);
-    --button-text-color-hover: var(--text-color);
-    --button-background-color-hover: var(--primary-color-contrast-hover);
-    --button-text-color-active: var(--primary-color-contrast);
-    --button-border-color-active: var(--primary-color-contrast);
-    --button-background-color-active: var(--primary-color);
-}
-
-.button-secondary{
-    --button-text-color: var(--secondary-color-contrast);
-    --button-border-color: var(--secondary-color-contrast);
-    --button-background-color: var(--secondary-color);
-    --button-text-color-hover: var(--text-color);
-    --button-background-color-hover: var(--secondary-color-contrast-hover);
-    --button-text-color-active: var(--text-color);
-    --button-border-color-active: var(--text-color);
-    --button-background-color-active: var(--secondary-color-contrast);
-}
-
-.button-secondary-outline{
-    --button-text-color: var(--text-color);
-    --button-border-color: var(--text-color);
-    --button-background-color: var(--secondary-color-contrast);
-    --button-text-color-hover: var(--text-color);
-    --button-background-color-hover: var(--secondary-color-contrast-hover);
-    --button-text-color-active: var(--secondary-color-contrast);
-    --button-border-color-active: var(--secondary-color-contrast);
-    --button-background-color-active: var(--secondary-color);
 }
 
 .button-danger{
