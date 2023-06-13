@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    font-family: monospace;
+    scroll-behavior: smooth;
+}
+
+[class*="flex"]{
+    display: flex;
+}
+
+.flex-vertical{
+    flex-direction: column;
+}
+
+.flex-centered{
+    justify-content: center;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: var(--grid-n-column);
+    grid-template-rows: var(--grid-n-row);
+}
+
+body{
+    overflow-y: hidden;
+    border: 0;
+    margin: 0;
+}
+
+:root{
+    --primary-color: #27187E;
+    --primary-color-contrast: #E6E6FF;
+    --primary-color-contrast-hover: #BDBDFF;
+    --secondary-color: #758BFD;
+    --secondary-color-contrast: #E6EFFF;
+    --secondary-color-contrast-hover: #BDBDFF;
+    --text-color: #464341;
+    --text-color-contrast: #FFFFFF;
+    --text-color-contrast-hover: #BDBDBD;
+    --danger-color: #FF5C58;
+    --danger-color-contrast: #FFD6D4;
+    --danger-color-contrast-hover: #FFBDBB;
+    --warning-color: #FFC145;
+    --warning-color-contrast: #FFF2D6;
+    --warning-color-contrast-hover: #FFDDBD;
+    --success-color: #00C48C;
+    --success-color-contrast: #D6FFF2;
+    --success-color-contrast-hover: #BDFFE0;
+    --global-border-radius: 8px;
+    --heading-height: 40px;
+    --section-full-height-heading: calc(var(--section-full-height) - var(--heading-height));
+    --section-half-height-heading: calc(var(--section-half-height) - var(--heading-height));
+    --section-quarter-height-heading: calc(var(--section-quarter-height) - var(--heading-height));
+    --section-full-height: 100vh;
+    --section-half-height: 50vh;
+    --section-quarter-height: 25vh;
+    --sidebar-width: 200px;
+    --padding-space: 30px;
+    --technology-icon: 40px;
+    --divisor-space: 20px;
+    --color: var(--text-color);
+    --color-contrast: var(--text-color-contrast);
+    --color-contrast-hover: var(--text-color-contrast-hover);
+}
+
+.mouse-pointer{
+    cursor: pointer;
+}
+
+.cursor-blink-effect{
+    animation: blink .5s step-end infinite alternate;
+    border-right: 3px solid;
+}
+
+.nowrap-text {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.divisor{
+    background-color: var(--color);
+    width: 80%;
+    height: 2px;
+    margin-bottom: var(--divisor-space);
+    margin-top: var(--divisor-space);
+}
+
+.theme-primary{
+    --color: var(--primary-color);
+    --color-contrast: var(--primary-color-contrast);
+    --color-contrast-hover: var(--primary-color-contrast-hover);
+}
+
+.theme-secondary{
+    --color: var(--secondary-color);
+    --color-contrast: var(--secondary-color-contrast);
+    --color-contrast-hover: var(--secondary-color-contrast-hover);
+}

@@ -1,0 +1,31 @@
+/* Form */
+
+form{
+    --form-input-border-color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+form > .input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.input-group > label {
+    order: 1;
+}
+
+.input-group > *:not(label){
+    order: 2;
+    border-radius: var(--global-border-radius);
+    border-width: 1px;
+    border-style: solid;
+}
+
+.input-group:has(*[type="checkbox"]) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}

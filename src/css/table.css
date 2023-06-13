@@ -1,0 +1,124 @@
+/* Table */
+
+table {
+    --table-header-color: var(--text-color-contrast);
+    --table-header-background-color: var(--text-color);
+    --table-border-color: var(--text-color);
+    --table-body-text-color: var(--text-color);
+    --table-odd-row-background-color: var(--text-color-contrast);
+    --table-even-row-background-color: var(--text-color-contrast-hover);
+    --table-caption-color: var(--text-color);
+    width: 100%;
+    border-spacing: 0;
+}
+
+.table-primary {
+    --table-header-color: var(--text-color-contrast);
+    --table-header-background-color: var(--primary-color);
+    --table-border-color: var(--primary-color);
+    --table-body-text-color: var(--text-color);
+    --table-odd-row-background-color: var(--primary-color-contrast);
+    --table-even-row-background-color: var(--primary-color-contrast-hover);
+    --table-caption-color: var(--primary-color);
+}
+
+.table-secondary {
+    --table-header-color: var(--text-color-contrast);
+    --table-header-background-color: var(--secondary-color);
+    --table-border-color: var(--secondary-color);
+    --table-body-text-color: var(--text-color);
+    --table-odd-row-background-color: var(--secondary-color-contrast);
+    --table-even-row-background-color: var(--secondary-color-contrast-hover);
+    --table-caption-color: var(--secondary-color);
+}
+
+.table-danger {
+    --table-header-color: var(--text-color-contrast);
+    --table-header-background-color: var(--danger-color);
+    --table-border-color: var(--danger-color);
+    --table-body-text-color: var(--text-color);
+    --table-odd-row-background-color: var(--danger-color-contrast);
+    --table-even-row-background-color: var(--danger-color-contrast-hover);
+    --table-caption-color: var(--danger-color);
+}
+
+.table-warning {
+    --table-header-color: var(--text-color-contrast);
+    --table-header-background-color: var(--warning-color);
+    --table-border-color: var(--warning-color);
+    --table-body-text-color: var(--text-color);
+    --table-odd-row-background-color: var(--warning-color-contrast);
+    --table-even-row-background-color: var(--warning-color-contrast-hover);
+    --table-caption-color: var(--warning-color);
+}
+
+.table-success {
+    --table-header-color: var(--text-color-contrast);
+    --table-header-background-color: var(--success-color);
+    --table-border-color: var(--success-color);
+    --table-body-text-color: var(--text-color);
+    --table-odd-row-background-color: var(--success-color-contrast);
+    --table-even-row-background-color: var(--success-color-contrast-hover);
+    --table-caption-color: var(--success-color);
+}
+
+table > caption{
+    font-size: 2em;
+    font-weight: bold;
+    padding: 5px;
+    color: var(--table-caption-color);
+}
+thead > tr > th:first-of-type{
+    background-color: var(--table-header-background-color);
+    color: var(--table-header-color);
+    border-top-left-radius: var(--global-border-radius);
+}
+
+thead > tr > th{
+    background-color: var(--table-header-background-color);
+    color: var(--table-header-color);
+    border: 1px solid var(--table-border-color);
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+thead > tr > th:last-of-type{
+    background-color: var(--table-header-background-color);
+    color: var(--table-header-color);
+    border-top-right-radius: var(--global-border-radius);
+}
+
+tbody > tr > td:first-of-type{
+    border-left: 1px solid var(--table-border-color);
+}
+
+tbody > tr > td:not(:first-of-type):not(:last-of-type){
+    border-left: 1px solid var(--table-border-color);
+    border-right: 1px solid var(--table-border-color);
+}
+
+tbody > tr > td:last-of-type{
+    border-right: 1px solid var(--table-border-color);
+}
+
+tbody > tr:last-of-type > td:first-of-type{
+    border-bottom-left-radius: var(--global-border-radius);
+}
+
+tbody > tr > td{
+    border-bottom: 1px solid var(--table-border-color);
+    text-align: center;
+    color: var(--table-body-text-color);
+}
+tbody > tr:last-of-type > td:last-of-type{
+    border-bottom-right-radius: var(--global-border-radius);
+}
+
+tbody > tr:nth-child(even) > td{
+    background-color: var(--table-even-row-background-color);
+}
+
+tbody > tr:nth-child(odd) > td{
+    background-color: var(--table-odd-row-background-color);
+}

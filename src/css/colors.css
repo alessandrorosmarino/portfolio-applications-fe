@@ -1,0 +1,73 @@
+/* Colors */
+
+.primary-color{
+    color: var(--primary-color);
+}
+
+.primary-color-contrast{
+    color: var(--primary-color-contrast);
+}
+
+.primary-color-contrast-hover{
+    color: var(--primary-color-contrast-hover);
+}
+
+.secondary-color{
+    color: var(--secondary-color);
+}
+
+.secondary-color-contrast{
+    color: var(--secondary-color-contrast);
+}
+
+.secondary-color-contrast-hover{
+    color: var(--secondary-color-contrast-hover);
+}
+
+.text-color{
+    color: var(--text-color);
+}
+
+.text-color-contrast{
+    color: var(--text-color-contrast);
+}
+
+.text-color-contrast-hover{
+    color: var(--text-color-contrast-hover);
+}
+
+.danger-color{
+    color: var(--danger-color);
+}
+
+.danger-color-contrast{
+    color: var(--danger-color-contrast);
+}
+
+.danger-color-contrast-hover{
+    color: var(--danger-color-contrast-hover);
+}
+
+.warning-color{
+    color: var(--warning-color);
+}
+
+.warning-color-contrast{
+    color: var(--warning-color-contrast);
+}
+
+.warning-color-contrast-hover{
+    color: var(--warning-color-contrast-hover);
+}
+
+.success-color{
+    color: var(--success-color);
+}
+
+.success-color-contrast{
+    color: var(--success-color-contrast);
+}
+
+.success-color-contrast-hover{
+    color: var(--success-color-contrast-hover);
+}

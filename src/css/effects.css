@@ -1,0 +1,81 @@
+.fade-in-side-lines{
+    background-image: linear-gradient(var(--color),var(--color)),
+    linear-gradient(var(--color),var(--color));
+    background-repeat: no-repeat;
+    background-size: calc(50% + 1px) 0.8em;
+    background-position: -101% 0, 201% 100%;
+    transition: background-size 0.5s 1s, background-position 0.5s 1.5s;
+    background-color: var(--text-color-contrast);
+    --fade-in-side-lines-color: var(--color);
+    --fade-in-side-lines-color-hover: var(--color-contrast);
+}
+
+.fade-in-side-lines > *:not(.typingEffect){
+    color: var(--fade-in-side-lines-color);
+    transition: color 0.5s 1s ease-in-out;
+}
+
+.fade-in-side-lines:hover > *:not(.typingEffect){
+    color: var(--fade-in-side-lines-color-hover);
+    transition: color 1s 0.5s ease-in-out;
+}
+
+[class*="fade-in-side-lines"]:hover {
+    transition: background-size 0.5s 0.5s, background-position 0.5s;
+    background-size: calc(50% + 1px) 100%;
+    background-position: 0 0,100% 100%;
+}
+
+.typingEffect {
+    width: 0;
+    border-right: 3px solid;
+    visibility: hidden;
+    transition: visibility 1s step-end,width 1s step-end;
+    color: var(--fade-in-side-lines-color-hover);
+}
+
+[class*="fade-in-side-lines"].hovered .typingEffect {
+    animation: typingOut 1s steps(var(--width)), blink .5s step-end infinite alternate;
+}
+
+[class*="fade-in-side-lines"]:hover .typingEffect {
+    width: var(--chars);
+    animation: 1s typingIn 1s steps(var(--width)), blink .5s step-end infinite alternate;
+    visibility: visible;
+}
+
+@keyframes typingIn {
+    from {
+        width: 0
+    }
+    to {
+        width: var(--chars)
+    }
+}
+
+@keyframes typingOut {
+    from {
+        width: var(--chars)
+    }
+    to {
+        width: 0
+    }
+}
+
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+@keyframes pulse {
+    0%{
+        r: 20px;
+        opacity: 0;
+    }
+    100%{
+        r: 30px;
+        opacity: 100%;
+    }
+}

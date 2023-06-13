@@ -1,0 +1,60 @@
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--heading-height);
+    color: var(--text-color);
+    z-index: 999;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--text-color-contrast-hover);
+    background-color: var(--text-color-contrast);
+}
+
+.header-primary{
+    border-bottom-color: var(--primary-color-contrast);
+    background-color: var(--primary-color);
+    color: var(--primary-color-contrast);
+}
+
+.header-primary-outline{
+    border-bottom-color: var(--primary-color);
+    background-color: var(--primary-color-contrast);
+    color: var(--text-color);
+}
+
+.header-secondary{
+    border-bottom-color: var(--secondary-color-contrast);
+    background-color: var(--secondary-color);
+    color: var(--secondary-color-contrast);
+}
+
+.header-secondary-outline{
+    border-bottom-color: var(--secondary-color);
+    background-color: var(--secondary-color-contrast);
+    color: var(--text-color);
+}
+
+header > div:first-of-type{
+    justify-content: flex-start;
+    padding-left: var(--padding-space);
+}
+
+header > div:last-of-type{
+    justify-content: flex-end;
+    padding-right: var(--padding-space);
+}
+
+header > div:not(:last-of-type):not(:first-of-type){
+    justify-content: center;
+}
+
+header > div{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: var(--heading-height);
+    height: var(--heading-height);
+}
