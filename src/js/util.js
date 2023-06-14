@@ -1,20 +1,10 @@
 let headerHeight = getComputedStyle(document.documentElement).getPropertyValue(
-  "--heading-height"
+  "--header-height"
 );
 headerHeight = headerHeight.substring(0, headerHeight.indexOf("px"));
 
-// Script to toggle the hidden bar
-var burger = document.querySelector(".burger");
-var sidebar = document.querySelector(".portfolio-nav");
-
-burger.addEventListener("click", function () {
-  sidebar.classList.toggle("show-nav");
-});
-
 // Script to perform the reverse animation only after hover
-const fadeInEffects = document.querySelectorAll(
-  "[class*='fade-in-side-lines']"
-);
+const fadeInEffects = document.querySelectorAll(".fade-in-side-lines");
 for (let i = 0; i < fadeInEffects.length; i++) {
   fadeInEffects[i].addEventListener("mouseover", () => {
     fadeInEffects[i].classList.add("hovered");

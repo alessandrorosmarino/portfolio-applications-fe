@@ -2,13 +2,16 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
-    height: var(--heading-height);
+    height: var(--header-height);
     color: var(--color-contrast);
     z-index: 999;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: var(--color-contrast-hover);
     background-color: var(--color);
+    display: grid;
+    grid-template-columns: var(--header-grid-columns);
+    grid-template-rows: var(--header-grid-rows);
 }
 
 header > div:first-of-type{
@@ -30,7 +33,7 @@ header > div{
     align-items: center;
 }
 
-.logo{
-    width: var(--heading-height);
-    height: var(--heading-height);
+header img{
+    width: var(--header-height);
+    height: var(--header-height);
 }

@@ -1,6 +1,6 @@
 nav{
     position: fixed;
-    top: var(--heading-height);
+    top: var(--header-height);
     left: calc(-1 * var(--sidebar-width));
     width: var(--sidebar-width);
     height: 100%;

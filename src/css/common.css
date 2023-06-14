@@ -4,6 +4,16 @@
     scroll-behavior: smooth;
 }
 
+*:link {
+    color: var(--link-color);
+    text-decoration-line: none;
+}
+
+*:visited {
+    color: var(--link-color-visited);
+    text-decoration-line: none;
+}
+
 [class*="flex"]{
     display: flex;
 }
@@ -49,10 +59,12 @@ body{
     --success-color-contrast: #D6FFF2;
     --success-color-contrast-hover: #BDFFE0;
     --global-border-radius: 8px;
-    --heading-height: 40px;
-    --section-full-height-heading: calc(var(--section-full-height) - var(--heading-height));
-    --section-half-height-heading: calc(var(--section-half-height) - var(--heading-height));
-    --section-quarter-height-heading: calc(var(--section-quarter-height) - var(--heading-height));
+    --header-height: 40px;
+    --header-grid-columns: 1fr 1fr 1fr;
+    --header-grid-rows: 1fr;
+    --section-full-height-heading: calc(var(--section-full-height) - var(--header-height));
+    --section-half-height-heading: calc(var(--section-half-height) - var(--header-height));
+    --section-quarter-height-heading: calc(var(--section-quarter-height) - var(--header-height));
     --section-full-height: 100vh;
     --section-half-height: 50vh;
     --section-quarter-height: 25vh;
@@ -60,6 +72,8 @@ body{
     --padding-space: 30px;
     --technology-icon: 40px;
     --divisor-space: 20px;
+    --link-color: var(--text-color-contrast);
+    --link-color-visited: var(--text-color-contrast-hover);
     --color: var(--text-color);
     --color-contrast: var(--text-color-contrast);
     --color-contrast-hover: var(--text-color-contrast-hover);
@@ -91,10 +105,14 @@ body{
     --color: var(--primary-color);
     --color-contrast: var(--primary-color-contrast);
     --color-contrast-hover: var(--primary-color-contrast-hover);
+    --link-color: var(--primary-color-contrast);
+    --link-color-visited: var(--primary-color-contrast-hover);
 }
 
 .theme-secondary{
     --color: var(--secondary-color);
     --color-contrast: var(--secondary-color-contrast);
     --color-contrast-hover: var(--secondary-color-contrast-hover);
+    --link-color: var(--secondary-color-contrast);
+    --link-color-visited: var(--secondary-color-contrast-hover);
 }
