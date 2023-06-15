@@ -1,26 +1,28 @@
 <template>
-  <table class="table-primary">
-    <caption>
-      Reminders
-    </caption>
-    <thead>
-      <tr>
-        <th>Time</th>
-        <th>Text</th>
-        <th>Details</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="reminder in reminders" :key="reminder.id">
-        <td>{{ reminder.reminderTime }}</td>
-        <td>{{ reminder.reminderText }}</td>
-        <td><button v-on:click="openDialog(reminder.id)">Details</button></td>
-        <dialog v-bind:id="'reminder' + reminder.id">
-          <ReminderCard :reminder="reminder" @updateData="getAllReminders" />
-        </dialog>
-      </tr>
-    </tbody>
-  </table>
+  <div class="reminder-list">
+    <table>
+      <caption>
+        Reminders
+      </caption>
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Text</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="reminder in reminders" :key="reminder.id">
+          <td>{{ reminder.reminderTime }}</td>
+          <td>{{ reminder.reminderText }}</td>
+          <td><button v-on:click="openDialog(reminder.id)">Details</button></td>
+          <dialog v-bind:id="'reminder' + reminder.id">
+            <ReminderCard :reminder="reminder" @updateData="getAllReminders" />
+          </dialog>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
 
 <script setup>
@@ -52,5 +54,9 @@ function openDialog(id) {
 dialog {
   border-radius: 30px;
   border: 0;
+}
+
+.reminder-list{
+  height: var(--half-height-heading);
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <div class="flex vertical card">
+  <div class="flex-vertical card">
     <div class="flex close">
-      <div class="flex vertical">
+      <div class="flex-vertical">
         <span>{{ reminder.reminderTime.substring(0, 5) }}</span>
         <span v-bind:class="getSuccessOrDangerClass(reminder.done)">
           {{ reminder.done ? "C" : "Not c" }}ompleted

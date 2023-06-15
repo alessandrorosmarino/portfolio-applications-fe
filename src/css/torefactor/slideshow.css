@@ -1,6 +1,6 @@
 
 .slideshow{
-    height: var(--section-full-height);
+    height: var(--full-height);
     --grid-n-column: 60px 1fr 60px;
     --grid-n-row: 1fr;
     color: var(--text-color);

@@ -1,5 +1,4 @@
 /* Form */
-
 form{
     --form-input-border-color: var(--text-color);
     display: flex;

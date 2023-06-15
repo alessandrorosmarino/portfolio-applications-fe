@@ -62,12 +62,12 @@ body{
     --header-height: 40px;
     --header-grid-columns: 1fr 1fr 1fr;
     --header-grid-rows: 1fr;
-    --section-full-height-heading: calc(var(--section-full-height) - var(--header-height));
-    --section-half-height-heading: calc(var(--section-half-height) - var(--header-height));
-    --section-quarter-height-heading: calc(var(--section-quarter-height) - var(--header-height));
-    --section-full-height: 100vh;
-    --section-half-height: 50vh;
-    --section-quarter-height: 25vh;
+    --full-height-heading: calc(var(--full-height) - var(--header-height));
+    --half-height-heading: calc(var(--half-height) - var(--header-height));
+    --quarter-height-heading: calc(var(--quarter-height) - var(--header-height));
+    --full-height: 100vh;
+    --half-height: 50vh;
+    --quarter-height: 25vh;
     --sidebar-width: 200px;
     --padding-space: 30px;
     --technology-icon: 40px;

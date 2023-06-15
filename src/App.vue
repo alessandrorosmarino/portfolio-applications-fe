@@ -28,6 +28,7 @@
         </li>
       </ul>
     </nav>
+    <header-filler></header-filler>
     <router-view />
   </div>
 </template>
@@ -44,4 +45,10 @@ onMounted(() => {
 
 <style>
 @import "css/stylesheet.css";
+
+header-filler {
+  width: 100%;
+  height: var(--header-height);
+  display: block;
+}
 </style>

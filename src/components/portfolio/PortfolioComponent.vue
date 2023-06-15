@@ -1,11 +1,6 @@
 <template>
-  <head>
-    <title>Alessandro's Portfolio</title>
-  </head>
-
   <!-- Content -->
   <section class="main-container flex-vertical">
-    <section class="filler"></section>
     <!-- Presentation -->
     <section class="presentation grid scrolling-slide">
       <div class="flex-centered">
@@ -174,14 +169,10 @@ onMounted(() => {
   background-color: var(--color-contrast);
 }
 
-.filler {
-  flex: 1 0 var(--header-height);
-}
-
 /* End Main-container */
 
 .presentation {
-  height: var(--section-full-height-heading);
+  height: var(--full-height-heading);
   --grid-n-column: 1fr 1fr;
   --grid-n-row: 1fr;
   color: var(--text-color);
@@ -196,27 +187,28 @@ onMounted(() => {
   font-size: 4em;
   color: var(--color);
 }
+
 .project-table {
-  height: var(--section-full-height-heading);
+  height: var(--full-height-heading);
   --grid-n-column: 1fr 1fr 1fr;
   --grid-n-row: 1fr;
 }
 
 .skills {
-  height: var(--section-quarter-height);
+  height: var(--quarter-height);
   --grid-n-column: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
   --grid-n-row: 1fr;
 }
 
 .education {
-  height: var(--section-quarter-height-heading);
+  height: var(--quarter-height-heading);
   --grid-n-column: 1fr 1fr 1fr 1fr;
   --grid-n-row: 1fr;
   color: var(--text-color);
 }
 
 .working-experience {
-  height: var(--section-full-height-heading);
+  height: var(--full-height-heading);
   --grid-n-row: 1fr 1fr 1fr;
   --grid-n-column: 1fr;
   color: var(--text-color);

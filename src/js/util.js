@@ -79,10 +79,23 @@ for (const skill of skills) {
 /* Start scrolling effect */
 let scrolling = false;
 var scrollingList = [];
-var scrollingSlides = document.querySelectorAll(".scrolling-slide");
+var scrollingSlides;
 
-for (const slide of scrollingSlides) {
-  scrollingList.push({ element: slide, selected: false });
+updateScrollingSlides();
+
+function updateScrollingSlides() {
+  let previousSelected = scrollingList.find((e) => e.selected);
+  console.log(previousSelected);
+  scrollingSlides = document.querySelectorAll(".scrolling-slide");
+  scrollingList = [];
+  for (const slide of scrollingSlides) {
+    let isSelected = false;
+    if(previousSelected === undefined || previousSelected?.element === slide){
+      isSelected = true;
+      previousSelected = { element: slide, selected: isSelected };
+    }
+    scrollingList.push({ element: slide, selected: isSelected });
+  }
 }
 
 const sectionObserver = new IntersectionObserver((entries) => {
@@ -110,6 +123,7 @@ window.addEventListener("wheel", (e) => e.preventDefault(), {
 
 function activateScrollingEffect(e) {
   if (!scrolling) {
+    updateScrollingSlides();
     scrollToNextSection(e.deltaY > 0);
   }
 }
