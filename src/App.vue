@@ -1,8 +1,12 @@
 <template>
   <div class="theme-primary">
     <header>
-      <div class="mouse-pointer">
-        <header-burger>&#9776;</header-burger>
+      <div>
+        <router-link to="/" v-on:click="title = 'Alessandro\'s Portfolio'" class="mouse-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+            <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/>
+          </svg>
+        </router-link>
       </div>
       <div>
         <p class="cursor-blink-effect">{{ title }}</p>
@@ -11,40 +15,28 @@
         <img src="./assets/Logo.png" alt="AR" />
       </div>
     </header>
-    <nav>
-      <ul>
-        <li>
-          <router-link to="/" v-on:click="title = 'Alessandro\'s Portfolio'"
-            >Home</router-link
-          >
-        </li>
-        <li>
-          <router-link to="/about">About</router-link>
-        </li>
-        <li>
-          <router-link to="/reminders" v-on:click="title = 'Task Reminders'"
-            >Task Reminders</router-link
-          >
-        </li>
-      </ul>
-    </nav>
     <header-filler></header-filler>
-    <router-view />
+    <router-view @triggerRouter="goToRoute" />
   </div>
 </template>
 
 <script setup>
-import { onMounted, ref } from "vue";
+import { ref } from "vue";
+import router from "@/router";
 
 let title = ref("Alessandro's Portfolio");
 
-onMounted(() => {
-  import("./js/navigation.js");
-});
+function goToRoute(path) {
+  router.push("/" + path);
+}
 </script>
 
 <style>
 @import "css/stylesheet.css";
+
+svg {
+  fill: var(--color-contrast)
+}
 
 header-filler {
   width: 100%;

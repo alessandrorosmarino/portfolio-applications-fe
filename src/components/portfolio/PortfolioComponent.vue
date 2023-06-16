@@ -66,22 +66,32 @@
     <!-- Projects -->
     <section class="project-table grid scrolling-slide">
       <PortfolioProject link="https://github.com/alessandrorosmarino/Play-Performance"
-        isJava
-        isSpring
-        isMySql
-        isAngular
-        isHtml
-        isCss
-        isJs
+                        isJava
+                        isSpring
+                        isMySql
+                        isAngular
+                        isHtml
+                        isCss
+                        isJs
+                        router-path="playPerformance"
+                        @triggerRouter=""
       >
         Play Performance
       </PortfolioProject>
-      <PortfolioProject link="https://github.com/alessandrorosmarino/Wrapper" isJava >
+      <PortfolioProject link="https://github.com/alessandrorosmarino/Wrapper" isJava
+        router-path="wrapper" @triggerRouter="">
         Dependency Injector
       </PortfolioProject>
-      <PortfolioProject link="https://github.com/alessandrorosmarino/portfolio" isHtml isCss isJs >
+      <PortfolioProject link="https://github.com/alessandrorosmarino/portfolio" isHtml isCss isJs
+        router-path="portfolio" @triggerRouter="">
         Portfolio
       </PortfolioProject>
+      <div></div> <!-- Empty div to fill the grid -->
+      <PortfolioProject link="https://github.com/alessandrorosmarino/portfolio-applications-fe" is-vue isHtml isCss isJs
+        router-path="taskReminder" @triggerRouter="emitRouter">
+        Single Page Application
+      </PortfolioProject>
+      <div></div> <!-- Empty div to fill the grid -->
     </section>
 
     <!-- Working Experience -->
@@ -142,7 +152,7 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
+import { defineEmits, onMounted } from "vue";
 import ProgressBar from "@/components/portfolio/ProgressBar";
 import EducationPath from "@/components/portfolio/EducationPath";
 import WorkingExperience from "@/components/portfolio/WorkingExperience";
@@ -154,6 +164,12 @@ onMounted(() => {
     script = module.scrollToPage;
   });
 });
+
+const emits = defineEmits(["triggerRouter"]);
+
+function emitRouter(path) {
+  emits("triggerRouter", path);
+}
 </script>
 
 <style scoped>
@@ -191,7 +207,7 @@ onMounted(() => {
 .project-table {
   height: var(--full-height-heading);
   --grid-n-column: 1fr 1fr 1fr;
-  --grid-n-row: 1fr;
+  --grid-n-row: 1fr 1fr;
 }
 
 .skills {

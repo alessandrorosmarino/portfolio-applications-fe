@@ -27,6 +27,10 @@
     align-items: center;
 }
 
+.full-height{
+    height: var(--full-height);
+}
+
 .grid{
     display: grid;
     grid-template-columns: var(--grid-n-column);

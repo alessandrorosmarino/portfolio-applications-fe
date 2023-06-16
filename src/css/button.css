@@ -1,6 +1,6 @@
 /* Buttons */
 
-button{
+button, .button{
     --button-text-color: var(--color-contrast);
     --button-border-color: var(--color-contrast);
     --button-background-color: var(--color);
@@ -18,8 +18,10 @@ button{
     margin: 5px;
     cursor: pointer;
     font-weight: bold;
-    text-align: center;
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 button:hover{

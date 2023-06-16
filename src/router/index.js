@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import PortfolioView from "../views/PortfolioView.vue";
 
 const routes = [
   {
     path: "/",
-    name: "home",
-    component: HomeView,
+    name: "portfolio",
+    component: PortfolioView,
   },
   {
     path: "/about",
@@ -14,7 +14,7 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
   {
-    path: "/reminders",
+    path: "/taskReminder",
     name: "Task Reminders",
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/ReminderView.vue"),

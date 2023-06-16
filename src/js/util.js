@@ -85,7 +85,6 @@ updateScrollingSlides();
 
 function updateScrollingSlides() {
   let previousSelected = scrollingList.find((e) => e.selected);
-  console.log(previousSelected);
   scrollingSlides = document.querySelectorAll(".scrolling-slide");
   scrollingList = [];
   for (const slide of scrollingSlides) {

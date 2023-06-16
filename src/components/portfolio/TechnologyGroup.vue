@@ -4,6 +4,7 @@
     <img v-if="isJava" alt="Java" class="technology" src="../../assets/java.png" />
     <img v-if="isSpring" alt="Spring" class="technology" src="../../assets/spring.svg" />
     <img v-if="isMySql" alt="MySQL" class="technology" src="../../assets/mySQL.png" />
+    <img v-if="isVue" alt="Vue" class="technology" src="../../assets/vue.png" />
     <img v-if="isAngular" alt="Angular" class="technology" src="../../assets/angular.png" />
     <img v-if="isHtml" alt="HTML5" class="technology" src="../../assets/html.png" />
     <img v-if="isCss" alt="CSS3" class="technology" src="../../assets/css.png" />
@@ -23,6 +24,7 @@ const props = defineProps({
   isHtml: Boolean,
   isCss: Boolean,
   isJs: Boolean,
+  isVue: Boolean,
 });
 
 function getTechnologyNumber(){
@@ -34,6 +36,7 @@ function getTechnologyNumber(){
   if(props.isHtml) number++;
   if(props.isCss) number++;
   if(props.isJs) number++;
+  if(props.isVue) number++;
   return number;
 }
 
