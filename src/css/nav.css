@@ -1,27 +1,42 @@
 nav{
+    display: grid;
+    grid-template-columns: var(--grid-n-column);
+    grid-template-rows: var(--grid-n-row);
+    grid-gap: calc(var(--navigator-width) * 2.5);
     position: fixed;
     top: var(--header-height);
-    left: calc(-1 * var(--sidebar-width));
-    width: var(--sidebar-width);
-    height: 100%;
-    transition: left 1s;
-    border-right-width: 1px;
-    border-right-style: solid;
-    border-right-color: var(--color-contrast-hover);
+    right: 10px;
+    height: var(--full-height-heading);
+    --number-of-navigation: 1;
+    --navigator-width: 16px;
+    --grid-n-column: var(--navigator-width);
+    --grid-n-row: 1fr repeat(var(--number-of-navigation),var(--navigator-width)) 1fr;
+}
+
+nav > div:not(:first-of-type):not(:last-of-type){
+    position: relative;
+    right: 0;
     background-color: var(--color);
+    border-radius: calc( var(--navigator-width) / 2);
+    border: 1px solid var(--color-contrast);
+    width: var(--navigator-width);
+    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out, right 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: transparent;
+    white-space: nowrap;
+}
+
+nav > div:not(:first-of-type):not(:last-of-type):hover{
+    background-color: var(--color);
+    top: 0;
+    width: calc( var(--navigator-width) * 15);
+    right: calc( var(--navigator-width) * 14);
     color: var(--color-contrast);
 }
 
-.show-nav{
-    left: 0;
-}
-
-nav > ul, nav > ol{
-    list-style-type: none;
-    padding-top: var(--padding-space);
-    padding-left: var(--padding-space);
-}
-
-nav li {
-    height: 2em;
+nav div.dot.dot-selected{
+    top: 1px;
+    right: 1px;
+    width: calc( var(--navigator-width) + 2px);
+    height: calc( var(--navigator-width) + 2px);
+    border: 3px double var(--color-contrast);
 }

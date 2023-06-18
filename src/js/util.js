@@ -2,13 +2,25 @@ let headerHeight = getComputedStyle(document.documentElement).getPropertyValue(
   "--header-height"
 );
 headerHeight = headerHeight.substring(0, headerHeight.indexOf("px"));
-
 // Script to perform the reverse animation only after hover
-const fadeInEffects = document.querySelectorAll(".fade-in-side-lines");
-for (let i = 0; i < fadeInEffects.length; i++) {
-  fadeInEffects[i].addEventListener("mouseover", () => {
-    fadeInEffects[i].classList.add("hovered");
-  });
+let fadeInEffects;
+
+updateFadeInEffects();
+
+function updateFadeInEffects() {
+  if(fadeInEffects !== undefined){
+    for (const fadeInEffect of fadeInEffects) {
+      fadeInEffect.removeEventListener("mouseover", addHoveredClass.bind(null, fadeInEffect));
+    }
+  }
+  fadeInEffects = document.querySelectorAll(".fade-in-side-lines");
+  for (let i = 0; i < fadeInEffects.length; i++) {
+    fadeInEffects[i].addEventListener("mouseover", addHoveredClass.bind(null, fadeInEffects[i]));
+  }
+}
+
+function addHoveredClass(element){
+  element.classList.add("hovered");
 }
 
 /*
@@ -61,7 +73,7 @@ for (let i = 0; i < fadeInEffects.length; i++) {
 
 /* Start skill appearing effect */
 
-var skills = document.querySelectorAll(".pointer-container");
+var skills;
 
 const rotationObserver = new IntersectionObserver((entries) => {
   for (const entry of entries) {
@@ -72,19 +84,45 @@ const rotationObserver = new IntersectionObserver((entries) => {
     }
   }
 });
-for (const skill of skills) {
-  rotationObserver.observe(skill);
+
+updateSkills();
+
+function updateSkills() {
+  if(skills !== undefined){
+    for (const skill of skills) {
+      rotationObserver.unobserve(skill);
+    }
+  }
+  skills = document.querySelectorAll(".pointer-container");
+  for (const skill of skills) {
+    rotationObserver.observe(skill);
+  }
 }
 
 /* Start scrolling effect */
 let scrolling = false;
-var scrollingList = [];
-var scrollingSlides;
+let scrollingList = [];
+let scrollingSlides;
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  for (const entry of entries) {
+    if (entry.intersectionRatio >= 1) {
+      scrollingList.find((e) => e.element === entry.target).selected = true;
+    }else{
+      scrollingList.find((e) => e.element === entry.target).selected = false;
+    }
+  }
+});
 
 updateScrollingSlides();
 
 function updateScrollingSlides() {
   let previousSelected = scrollingList.find((e) => e.selected);
+  if(previousSelected !== undefined){
+    for (const scrollingElement of scrollingList) {
+      sectionObserver.unobserve(scrollingElement.element);
+    }
+  }
   scrollingSlides = document.querySelectorAll(".scrolling-slide");
   scrollingList = [];
   for (const slide of scrollingSlides) {
@@ -94,26 +132,9 @@ function updateScrollingSlides() {
       previousSelected = { element: slide, selected: isSelected };
     }
     scrollingList.push({ element: slide, selected: isSelected });
+    sectionObserver.observe(slide);
   }
 }
-
-const sectionObserver = new IntersectionObserver((entries) => {
-  for (const entry of entries) {
-    if (entry.intersectionRatio >= 1) {
-      scrollingList.find((e) => e.element === entry.target).selected = true;
-    }
-  }
-});
-
-document.addEventListener(
-  "DOMContentLoaded",
-  function () {
-    for (let scrollingListElement of scrollingList) {
-      sectionObserver.observe(scrollingListElement.element);
-    }
-  },
-  false
-);
 
 window.addEventListener("wheel", activateScrollingEffect);
 window.addEventListener("wheel", (e) => e.preventDefault(), {
@@ -122,7 +143,6 @@ window.addEventListener("wheel", (e) => e.preventDefault(), {
 
 function activateScrollingEffect(e) {
   if (!scrolling) {
-    updateScrollingSlides();
     scrollToNextSection(e.deltaY > 0);
   }
 }
@@ -155,4 +175,10 @@ function isOutOfBounds(array, index) {
   return index >= array.length || index < 0;
 }
 
-export { scrollToPage };
+function updateAllEntities() {
+  updateFadeInEffects();
+  updateSkills();
+  updateScrollingSlides();
+}
+
+export { scrollToPage, updateAllEntities };

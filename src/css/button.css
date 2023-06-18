@@ -24,12 +24,12 @@ button, .button{
     flex-direction: column;
 }
 
-button:hover{
+button:hover, .button:hover{
     color: var(--button-text-color-hover);
     background-color: var(--button-background-color-hover);
 }
 
-button:active{
+button:active, .button:active{
     background-color: var(--button-background-color-active);
     color: var(--button-text-color-active);
     border-color: var(--button-border-color-active);

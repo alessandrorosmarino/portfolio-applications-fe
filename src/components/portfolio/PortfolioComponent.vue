@@ -1,6 +1,12 @@
 <template>
   <!-- Content -->
   <section class="main-container flex-vertical">
+    <NavigatorComponent
+      :first-method="() => scrollToPage(0,false)"
+      :second-method="() => scrollToPage(1,false)"
+      :third-method="() => scrollToPage(2,false)"
+      :fourth-method="() => scrollToPage(3,false)"
+    ></NavigatorComponent>
     <!-- Presentation -->
     <section class="presentation grid scrolling-slide">
       <div class="flex-centered">
@@ -28,7 +34,7 @@
           >
             Contact Me
           </button>
-          <button v-on:click="script(1, false)">My Projects</button>
+          <button v-on:click="scrollToPage(1, false)">My Projects</button>
           <button
             onclick="location.href='../../assets/Alessandro%20Rosmarino%20CV.pdf'"
           >
@@ -157,13 +163,16 @@ import ProgressBar from "@/components/portfolio/ProgressBar";
 import EducationPath from "@/components/portfolio/EducationPath";
 import WorkingExperience from "@/components/portfolio/WorkingExperience";
 import PortfolioProject from "@/components/portfolio/PortfolioProject";
+import NavigatorComponent from "@/components/portfolio/NavigatorComponent";
 
-let script;
+let scrollToPage;
 onMounted(() => {
   import("../../js/util.js").then((module) => {
-    script = module.scrollToPage;
+    scrollToPage = module.scrollToPage;
+    module.updateAllEntities();
   });
 });
+
 
 const emits = defineEmits(["triggerRouter"]);
 

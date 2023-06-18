@@ -15,7 +15,7 @@
         <tr v-for="reminder in reminders" :key="reminder.id">
           <td>{{ reminder.reminderTime }}</td>
           <td>{{ reminder.reminderText }}</td>
-          <td><button v-on:click="openDialog(reminder.id)">Details</button></td>
+          <td class="button-group"><button v-on:click="openDialog(reminder.id)">Details</button></td>
           <dialog v-bind:id="'reminder' + reminder.id">
             <ReminderCard :reminder="reminder" @updateData="getAllReminders" />
           </dialog>

@@ -1,7 +1,7 @@
 <template>
   <div class="flex-vertical">
     <a v-on:click="emitRouter()"
-      class="flex-vertical flex-centered fade-in-side-lines project"
+      class="flex-vertical flex-centered fade-in-side-lines project mouse-pointer"
     >
       <div class="flex-centered flex-vertical">
         <p class="title">
@@ -58,11 +58,11 @@ function emitRouter() {
 }
 
 .project {
-  height: 80%;
+  height: calc(100% - 16px);
 }
 
 .git-hub {
-  height: 20%;
+  height: 16px;
 }
 
 </style>
