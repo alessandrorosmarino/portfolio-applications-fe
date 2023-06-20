@@ -66,12 +66,15 @@
         router-path="portfolio" @triggerRouter="">
         Portfolio
       </PortfolioProject>
-      <div></div> <!-- Empty div to fill the grid -->
       <PortfolioProject link="https://github.com/alessandrorosmarino/portfolio-applications-fe" is-vue isHtml isCss isJs
-        router-path="taskReminder" @triggerRouter="emitRouter">
-        Single Page Application
+        router-path="" @triggerRouter="emitRouter" clickable>
+        Single Page Application (This whole project)
       </PortfolioProject>
       <div></div> <!-- Empty div to fill the grid -->
+      <PortfolioProject link="https://github.com/alessandrorosmarino/task-reminder-be" is-java is-spring
+        router-path="taskReminder" @triggerRouter="emitRouter" clickable>
+        Task Reminder
+      </PortfolioProject>
     </section>
 
     <!-- Working Experience -->

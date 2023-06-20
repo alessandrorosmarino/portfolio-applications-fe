@@ -1,7 +1,7 @@
 <template>
   <div class="flex-vertical">
-    <a v-on:click="emitRouter()"
-      class="flex-vertical flex-centered fade-in-side-lines project mouse-pointer"
+    <div v-on:click="emitRouter()"
+      class="flex-vertical flex-centered fade-in-side-lines project" v-bind:class="clickable ? 'mouse-pointer' : '' "
     >
       <div class="flex-centered flex-vertical">
         <p class="title">
@@ -18,8 +18,8 @@
           v-bind:is-vue="isVue"
         ></TechnologyGroup>
       </div>
-      <p class="typingEffect nowrap-text goToProject">> Go to project!</p>
-    </a>
+      <p v-if="clickable" class="typingEffect nowrap-text goToProject">> Go to project!</p>
+    </div>
     <a class="button git-hub" v-bind:href="link" target="_blank">
       Go to GitHub Project!
     </a>
@@ -31,6 +31,7 @@ import { defineEmits, defineProps } from "vue";
 import TechnologyGroup from "@/components/portfolio/TechnologyGroup";
 
 const props = defineProps({
+  clickable: Boolean,
   link: String,
   isJava: Boolean,
   isSpring: Boolean,

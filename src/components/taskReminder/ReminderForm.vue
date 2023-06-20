@@ -3,7 +3,7 @@
     <form class="reminder-form">
       <h1>Reminder Form</h1>
       <div class="input-group">
-        <label for="reminderTime">Alert Time</label>
+        <label for="reminderTime">Reminder Time</label>
         <input
           type="time"
           id="reminderTime"
