@@ -8,7 +8,7 @@
     </div>
     <div class="flex-centered flex-vertical">
       <p class="work-title">{{ title }}</p>
-      <p class="work-description">
+      <p>
         <slot></slot>
       </p>
     </div>
@@ -54,9 +54,6 @@ defineProps({
 .work-title {
   color: var(--color);
   margin-bottom: var(--divisor-space);
-}
-
-.work-description {
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 </style>

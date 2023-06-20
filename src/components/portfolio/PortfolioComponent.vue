@@ -16,16 +16,16 @@
         <p class="job-title">Java developer</p>
         <p class="divisor"></p>
         <p class="nowrap-text">
-          Specialized in Java development and able to use the Spring Framework
-          (Boot , Security, Data, Batch, Web).
+          Passionate developer specialized in Java (8, 11, 17) and Spring Framework
+          (Boot, Security, Data, Batch, Web).
         </p>
         <p class="nowrap-text">
-          Skilled with relational database management and interpretation
-          (Oracle, MSSQL, MySQL).
+          Skilled with relational databases (Oracle, MSSQL, MySQL).
         </p>
-        <p class="nowrap-text">Familiarity with front-end development.</p>
+        <p class="nowrap-text">Skilled with Front-end development (HTML, CSS, Javascript)
+          and Front-end frameworks (Angular, Vue).</p>
         <p class="nowrap-text">
-          Familiarity with Git , Atlassian tools, and Jenkins.
+          Familiarity with Git, Atlassian tools, Jenkins and many more tools.
         </p>
         <p class="divisor"></p>
         <div class="button-group">
@@ -43,32 +43,6 @@
         </div>
       </div>
     </section>
-    <!--
-    <section class="slideshow grid tri-column single-row" >
-        <div class="previous-button flex centered"><</div>
-        <div class="flex vertical-direction">
-            <div class="slide-container">
-                <div class="slide active white"></div>
-                <div class="slide yellow"></div>
-                <div class="slide purple"></div>
-            </div>
-            <div class="slide-dot-container grid penta-column single-row">
-                <div></div>
-                <div class="flex centered">
-                    <svg class="dot-container"><circle class="dot"></circle></svg>
-                </div>
-                <div class="flex centered">
-                    <svg class="dot-container"><circle class="dot"></circle></svg>
-                </div>
-                <div class="flex centered">
-                    <svg class="dot-container"><circle class="dot"></circle></svg>
-                </div>
-                <div></div>
-            </div>
-        </div>
-        <div class="next-button flex centered">></div>
-    </section>
-    -->
     <!-- Projects -->
     <section class="project-table grid scrolling-slide">
       <PortfolioProject link="https://github.com/alessandrorosmarino/Play-Performance"
@@ -198,7 +172,7 @@ function emitRouter(path) {
 
 .presentation {
   height: var(--full-height-heading);
-  --grid-n-column: 1fr 1fr;
+  --grid-n-column: 1fr 2fr;
   --grid-n-row: 1fr;
   color: var(--text-color);
 }

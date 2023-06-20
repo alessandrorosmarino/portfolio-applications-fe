@@ -31,6 +31,7 @@ nav > div:not(:first-of-type):not(:last-of-type):hover{
     width: calc( var(--navigator-width) * 15);
     right: calc( var(--navigator-width) * 14);
     color: var(--color-contrast);
+    cursor: pointer;
 }
 
 nav div.dot.dot-selected{
