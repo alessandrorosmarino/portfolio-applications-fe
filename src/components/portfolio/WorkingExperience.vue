@@ -1,9 +1,9 @@
 <template>
-  <div v-bind:class="'working-experience-' + (isImageOnLeft?'left':'') + (isImageOnRight?'right':'') + ' grid'">
+  <div v-bind:class="'working-experience' + (isImageOnLeft?'-left':'') + (isImageOnRight?'-right':'') + ' grid'">
     <div v-if="isImageOnLeft" class="flex-centered">
       <img
         class="working-experience-image"
-        v-bind:src="imageSrc"
+        v-bind:src="src"
       />
     </div>
     <div class="flex-centered flex-vertical">
@@ -15,7 +15,7 @@
     <div v-if="isImageOnRight" class="flex-centered">
       <img
         class="working-experience-image"
-        v-bind:src="imageSrc"
+        v-bind:src="src"
       />
     </div>
   </div>
@@ -24,12 +24,21 @@
 <script setup>
 import { defineProps } from "vue";
 
-defineProps({
+let props = defineProps({
   title: String,
   isImageOnLeft: Boolean,
   isImageOnRight: Boolean,
   imageSrc: String,
 });
+
+let src = undefined;
+
+if(props.imageSrc !== undefined && props.imageSrc.length > 0 ){
+  let imgs=require.context('@/assets/workingImages', false, /\.png$/);
+  src = imgs.keys().map(imgs).filter( (text) => text.toString().includes(props.imageSrc) )[0];
+}else{
+  src = "https://via.placeholder.com/355x200";
+}
 </script>
 
 <style scoped>
@@ -37,6 +46,11 @@ defineProps({
 .working-experience-left {
   --grid-n-row: 1fr;
   --grid-n-column: 1fr 3fr;
+}
+
+.working-experience{
+  --grid-n-row: 1fr;
+  --grid-n-column: 1fr;
 }
 
 .working-experience-right {

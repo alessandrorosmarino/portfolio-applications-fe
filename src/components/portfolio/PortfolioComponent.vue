@@ -36,7 +36,7 @@
           </button>
           <button v-on:click="scrollToPage(1, false)">My Projects</button>
           <button
-            onclick="location.href='../../assets/Alessandro%20Rosmarino%20CV.pdf'"
+            onclick="location.href='@/assets/Alessandro%20Rosmarino%20CV.pdf'"
           >
             Download my CV
           </button>
@@ -45,6 +45,18 @@
     </section>
     <!-- Projects -->
     <section class="project-table grid scrolling-slide">
+      <PortfolioProject link="https://github.com/alessandrorosmarino/portfolio-applications-fe" is-vue isHtml isCss isJs
+                        router-path="" @triggerRouter="emitRouter" clickable>
+        Single Page Application (This whole project)
+      </PortfolioProject>
+      <PortfolioProject link="https://github.com/alessandrorosmarino/Wrapper" isJava
+                        router-path="wrapper" @triggerRouter="">
+        Dependency Injector
+      </PortfolioProject>
+      <PortfolioProject link="https://github.com/alessandrorosmarino/task-reminder-be" is-java is-spring
+                        router-path="taskReminder" @triggerRouter="emitRouter" clickable>
+        Task Reminder
+      </PortfolioProject>
       <PortfolioProject link="https://github.com/alessandrorosmarino/Play-Performance"
                         isJava
                         isSpring
@@ -58,37 +70,29 @@
       >
         Play Performance
       </PortfolioProject>
-      <PortfolioProject link="https://github.com/alessandrorosmarino/Wrapper" isJava
-        router-path="wrapper" @triggerRouter="">
-        Dependency Injector
-      </PortfolioProject>
+      <div></div> <!-- Empty div to fill the grid -->
       <PortfolioProject link="https://github.com/alessandrorosmarino/portfolio" isHtml isCss isJs
         router-path="portfolio" @triggerRouter="">
         Portfolio
-      </PortfolioProject>
-      <PortfolioProject link="https://github.com/alessandrorosmarino/portfolio-applications-fe" is-vue isHtml isCss isJs
-        router-path="" @triggerRouter="emitRouter" clickable>
-        Single Page Application (This whole project)
-      </PortfolioProject>
-      <div></div> <!-- Empty div to fill the grid -->
-      <PortfolioProject link="https://github.com/alessandrorosmarino/task-reminder-be" is-java is-spring
-        router-path="taskReminder" @triggerRouter="emitRouter" clickable>
-        Task Reminder
       </PortfolioProject>
     </section>
 
     <!-- Working Experience -->
     <section class="working-experience grid scrolling-slide">
-      <WorkingExperience image-src="https://via.placeholder.com/355x200" is-image-on-left title="LMS & Mobile App">
+      <WorkingExperience image-src="mobileApp" is-image-on-left title="LMS & Mobile App">
         In this project I worked for a big Italian Automotive company
         developing web pages, backend logic and REST webservices of an
-        LMS....
+        LMS. I also developed a mobile app that communicates with the LMS
+        platform to consume the contents of the platform through the app.
+        The application involved Gamification mechanics to enhance
+        the experience.
       </WorkingExperience>
-      <WorkingExperience image-src="https://via.placeholder.com/355x200" is-image-on-right title="Front-End development">
-        In this project I worked for a banking company developing web
-        pages....
+      <WorkingExperience image-src="" is-image-on-right title="Front-End development">
+        In this project I worked for an Italian banking company developing web
+        pages in an Angular project while also refactoring some logic to enhance performance.
+        I also had to reverse engineer the back-end to document the code.
       </WorkingExperience>
-      <WorkingExperience image-src="https://via.placeholder.com/355x200" is-image-on-left title="Back-End development">
+      <WorkingExperience image-src="" is-image-on-left title="Back-End development">
         In this project I developed web pages, backend logic....
       </WorkingExperience>
     </section>

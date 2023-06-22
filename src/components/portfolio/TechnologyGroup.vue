@@ -1,14 +1,14 @@
 <template>
   <div class="technology-group grid">
     <div></div>
-    <img v-if="isJava" alt="Java" class="technology" src="../../assets/java.png" />
-    <img v-if="isSpring" alt="Spring" class="technology" src="../../assets/spring.svg" />
-    <img v-if="isMySql" alt="MySQL" class="technology" src="../../assets/mySQL.png" />
-    <img v-if="isVue" alt="Vue" class="technology" src="../../assets/vue.png" />
-    <img v-if="isAngular" alt="Angular" class="technology" src="../../assets/angular.png" />
-    <img v-if="isHtml" alt="HTML5" class="technology" src="../../assets/html.png" />
-    <img v-if="isCss" alt="CSS3" class="technology" src="../../assets/css.png" />
-    <img v-if="isJs" alt="JS" class="technology" src="../../assets/js.png" />
+    <img v-if="isJava" alt="Java" class="technology" src="../../assets/technologies/java.png" />
+    <img v-if="isSpring" alt="Spring" class="technology" src="../../assets/technologies/spring.svg" />
+    <img v-if="isMySql" alt="MySQL" class="technology" src="../../assets/technologies/mySQL.png" />
+    <img v-if="isVue" alt="Vue" class="technology" src="../../assets/technologies/vue.png" />
+    <img v-if="isAngular" alt="Angular" class="technology" src="../../assets/technologies/angular.png" />
+    <img v-if="isHtml" alt="HTML5" class="technology" src="../../assets/technologies/html.png" />
+    <img v-if="isCss" alt="CSS3" class="technology" src="../../assets/technologies/css.png" />
+    <img v-if="isJs" alt="JS" class="technology" src="../../assets/technologies/js.png" />
     <div></div>
   </div>
 </template>
