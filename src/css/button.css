@@ -120,23 +120,23 @@ button:active, .button:active{
     flex-wrap: nowrap;
 }
 
-[class*="button-group"] > button:first-of-type{
+[class*="button-group"] > button:first-child,[class*="button-group"] > .button:first-child{
     border-radius: var(--global-border-radius) 0 0 var(--global-border-radius);
     margin-right: 0;
     border-right: 0;
 }
-[class*="button-group"] > button:not(:first-of-type):not(:last-of-type){
+[class*="button-group"] > button:not(:first-child):not(:last-child),[class*="button-group"] > .button:not(:first-child):not(:last-child){
     border-radius: 0;
     margin-left: 0;
     margin-right: 0;
     border-right: 0;
 }
-[class*="button-group"] > button:last-of-type{
+[class*="button-group"] > button:last-child,[class*="button-group"] > .button:last-child{
     border-radius: 0 var(--global-border-radius) var(--global-border-radius) 0;
     margin-left: 0;
 }
 
-[class*="button-group"] > button:only-of-type{
+[class*="button-group"] > button:only-child,[class*="button-group"] > .button:only-child{
     border-radius: var(--global-border-radius);
     border: 1px solid var(--button-border-color);
 }

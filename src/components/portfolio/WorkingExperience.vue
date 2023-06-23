@@ -34,7 +34,7 @@ let props = defineProps({
 let src = undefined;
 
 if(props.imageSrc !== undefined && props.imageSrc.length > 0 ){
-  let imgs=require.context('@/assets/workingImages', false, /\.png$/);
+  let imgs=require.context('@/assets/workingImages', false, /\.*$/);
   src = imgs.keys().map(imgs).filter( (text) => text.toString().includes(props.imageSrc) )[0];
 }else{
   src = "https://via.placeholder.com/355x200";
@@ -42,6 +42,11 @@ if(props.imageSrc !== undefined && props.imageSrc.length > 0 ){
 </script>
 
 <style scoped>
+
+[class*="working-experience"]{
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 .working-experience-left {
   --grid-n-row: 1fr;

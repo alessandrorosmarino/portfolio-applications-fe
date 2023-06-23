@@ -35,11 +35,9 @@
             Contact Me
           </button>
           <button v-on:click="scrollToPage(1, false)">My Projects</button>
-          <button
-            onclick="location.href='@/assets/Alessandro%20Rosmarino%20CV.pdf'"
-          >
+          <a v-bind:href="pdf.default" download="Alessandro Rosmarino CV.pdf" class="button">
             Download my CV
-          </button>
+          </a>
         </div>
       </div>
     </section>
@@ -87,18 +85,28 @@
         The application involved Gamification mechanics to enhance
         the experience.
       </WorkingExperience>
-      <WorkingExperience image-src="" is-image-on-right title="Front-End development">
+      <WorkingExperience image-src="bankingChart" is-image-on-right title="Front-End development">
         In this project I worked for an Italian banking company developing web
         pages in an Angular project while also refactoring some logic to enhance performance.
         I also had to reverse engineer the back-end to document the code.
       </WorkingExperience>
-      <WorkingExperience image-src="" is-image-on-left title="Back-End development">
-        In this project I developed web pages, backend logic....
+      <WorkingExperience image-src="aggregation" is-image-on-left title="Back-End development">
+        In this project I developed the backend of a data aggregation platform
+        which collects data from different sources and shows them in multiple
+        well organized dashboards.
       </WorkingExperience>
     </section>
 
+    <!-- Tools -->
+    <section class="tools grid scrolling-slide">
+      <div>All Technical Skills</div>
+      <div>
+        <TechnologyGroup is-all></TechnologyGroup>
+      </div>
+    </section>
+
     <!-- Skills -->
-    <section class="skills grid scrolling-slide">
+    <section class="skills grid">
       <div></div>
       <ProgressBar progress-percent="162deg">
         Software Development
@@ -145,6 +153,7 @@ import EducationPath from "@/components/portfolio/EducationPath";
 import WorkingExperience from "@/components/portfolio/WorkingExperience";
 import PortfolioProject from "@/components/portfolio/PortfolioProject";
 import NavigatorComponent from "@/components/portfolio/NavigatorComponent";
+import TechnologyGroup from "@/components/portfolio/TechnologyGroup";
 
 let scrollToPage;
 onMounted(() => {
@@ -160,6 +169,8 @@ const emits = defineEmits(["triggerRouter"]);
 function emitRouter(path) {
   emits("triggerRouter", path);
 }
+
+const pdf = require("../../assets/AlessandroRosmarinoCV.pdf");
 </script>
 
 <style scoped>
@@ -198,6 +209,12 @@ function emitRouter(path) {
   height: var(--full-height-heading);
   --grid-n-column: 1fr 1fr 1fr;
   --grid-n-row: 1fr 1fr;
+}
+
+.tools {
+  height: var(--half-height);
+  --grid-n-column: 1fr;
+  --grid-n-row: 1fr 2fr;
 }
 
 .skills {
