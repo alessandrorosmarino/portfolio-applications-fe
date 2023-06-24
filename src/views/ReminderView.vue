@@ -9,7 +9,9 @@ import ReminderList from "@/components/taskReminder/ReminderList";
 
 import { onMounted } from "vue";
 onMounted(() => {
-  import("../js/util.js");
+  import("../js/util.js").then((module) => {
+    module.updateAllEntities();
+  });
 });
 </script>
 

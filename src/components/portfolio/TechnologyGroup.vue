@@ -1,10 +1,9 @@
 <template>
   <div class="technology-group grid">
-    <div></div>
-    
+    <div></div> <!-- Empty div to center the images -->
     <!-- Backend -->
     <div v-if="backendTechnologies > 0" class="grid technology-category">
-      <div v-if="showCategoryText" class="flex-centered"> Backend </div>
+      <div v-if="showCategoryText" class="flex-centered important-text"> Backend </div>
       <div class="grid backend-technologies">
         <div></div> <!-- Empty div to center the images -->
         <div v-if="performCheck(isJava)" class="flex-centered">
@@ -39,7 +38,7 @@
 
     <!-- Database -->
     <div v-if="databaseTechnologies > 0" class="grid technology-category">
-      <div v-if="showCategoryText" class="flex-centered"> Database </div>
+      <div v-if="showCategoryText" class="flex-centered important-text"> Database </div>
       <div class="grid database-technologies">
         <div></div> <!-- Empty div to center the images -->
         <div v-if="performCheck(isMySql)" class="flex-centered">
@@ -59,7 +58,7 @@
 
     <!-- Frontend -->
     <div v-if="frontendTechnologies > 0" class="grid technology-category">
-      <div v-if="showCategoryText" class="flex-centered"> Frontend </div>
+      <div v-if="showCategoryText" class="flex-centered important-text"> Frontend </div>
       <div class="grid frontend-technologies">
         <div></div> <!-- Empty div to center the images -->
         <div v-if="performCheck(isVue)" class="flex-centered">
@@ -91,7 +90,7 @@
 
     <!-- Tools -->
     <div v-if="toolsTechnologies > 0" class="grid technology-category">
-      <div v-if="showCategoryText" class="flex-centered"> Tools </div>
+      <div v-if="showCategoryText" class="flex-centered important-text"> Tools </div>
       <div class="grid tools-technologies">
         <div></div> <!-- Empty div to center the images -->
         <div v-if="performCheck(isGit)" class="flex-centered">
@@ -126,7 +125,7 @@
 
     <!-- IDEs -->
     <div v-if="ideTechnologies > 0" class="grid technology-category">
-      <div v-if="showCategoryText" class="flex-centered"> IDEs </div>
+      <div v-if="showCategoryText" class="flex-centered important-text"> IDEs </div>
       <div class="grid ide-technologies">
         <div></div> <!-- Empty div to center the images -->
         <div v-if="performCheck(isIntelliJ)" class="flex-centered">
@@ -155,7 +154,7 @@
 
     <!-- Servers -->
     <div v-if="serverTechnologies > 0" class="grid technology-category">
-      <div v-if="showCategoryText" class="flex-centered"> Servers </div>
+      <div v-if="showCategoryText" class="flex-centered important-text"> Servers </div>
       <div class="grid server-technologies">
         <div></div> <!-- Empty div to center the images -->
         <div v-if="performCheck(isDocker)" class="flex-centered">
@@ -176,8 +175,7 @@
         <div></div> <!-- Empty div to center the images -->
       </div>
     </div>
-    
-    <div></div>
+    <div></div> <!-- Empty div to center the images -->
   </div>
 </template>
 
@@ -185,6 +183,8 @@
 import { defineProps } from "vue";
 
 const props = defineProps({
+  isVertical: Boolean,
+  isHorizontal: Boolean,
   separated:Boolean,
   showCategoryText: Boolean,
 
@@ -327,6 +327,16 @@ function countNumberOfSections(){
 
 const technologyCategoryRows = (props.showCategoryText? "1em" : "") + " 1fr";
 
+let technologyGroupColumnTemplate;
+let technologyGroupRowTemplate;
+if (props.isVertical) {
+  technologyGroupColumnTemplate = "1fr";
+  technologyGroupRowTemplate = "10px " + sectionGridTemplateColumns + " 10px";
+}
+if (props.isHorizontal) {
+  technologyGroupColumnTemplate = "10px " + sectionGridTemplateColumns + " 10px";
+  technologyGroupRowTemplate = "1fr";
+}
 </script>
 
 <style scoped>
@@ -340,7 +350,7 @@ const technologyCategoryRows = (props.showCategoryText? "1em" : "") + " 1fr";
 }
 
 [class*="technologies"]{
-  grid-gap: 3px;
+  grid-gap: 30px;
   --grid-n-row: 1fr;
 }
 
@@ -374,7 +384,8 @@ const technologyCategoryRows = (props.showCategoryText? "1em" : "") + " 1fr";
 }
 
 .technology-group {
-  --grid-n-column: var(--padding-space) v-bind(sectionGridTemplateColumns) var(--padding-space);
-  --grid-n-row: 1fr;
+  --grid-n-column: v-bind(technologyGroupColumnTemplate);
+  --grid-n-row: v-bind(technologyGroupRowTemplate);
+  grid-gap: 15px;
 }
 </style>

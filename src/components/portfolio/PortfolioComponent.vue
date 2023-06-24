@@ -6,6 +6,7 @@
       :second-method="() => scrollToPage(1,false)"
       :third-method="() => scrollToPage(2,false)"
       :fourth-method="() => scrollToPage(3,false)"
+      :fifth-method="() => scrollToPage(4,false)"
     ></NavigatorComponent>
     <!-- Presentation -->
     <section class="presentation grid scrolling-slide">
@@ -41,6 +42,7 @@
         </div>
       </div>
     </section>
+
     <!-- Projects -->
     <section class="project-table grid scrolling-slide">
       <PortfolioProject link="https://github.com/alessandrorosmarino/portfolio-applications-fe" is-vue isHtml isCss isJs
@@ -99,8 +101,8 @@
 
     <!-- Tools -->
     <section class="tools grid scrolling-slide">
-      <div class="flex-centered important-text">Technical Skills</div>
-      <TechnologyGroup is-all show-category-text separated></TechnologyGroup>
+      <!--div class="flex-centered important-text">My Skills</div-->
+      <TechnologyGroup is-all show-category-text is-vertical></TechnologyGroup>
     </section>
 
     <!-- Skills -->
@@ -127,7 +129,7 @@
     </section>
 
     <!-- Education -->
-    <section class="education grid">
+    <section class="education grid scrolling-slide">
       <EducationPath is-first>
         Diploma in Computer Science, Technology and Telecommunications
       </EducationPath>
@@ -172,11 +174,6 @@ const pdf = require("../../assets/AlessandroRosmarinoCV.pdf");
 </script>
 
 <style scoped>
-.important-text {
-  color: var(--color);
-  font-size: 2em;
-  font-weight: bold;
-}
 
 /* Start Main-container */
 
@@ -211,10 +208,9 @@ const pdf = require("../../assets/AlessandroRosmarinoCV.pdf");
 }
 
 .tools {
-  height: var(--quarter-height);
+  height: calc(var(--half-height) + var(--quarter-height-heading));
   --grid-n-column: 1fr;
-  --grid-n-row: 6em 1fr;
-  grid-gap: 20px;
+  --grid-n-row: 1fr;
 }
 
 .skills {

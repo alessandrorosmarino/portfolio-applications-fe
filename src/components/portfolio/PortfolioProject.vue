@@ -16,6 +16,7 @@
           v-bind:is-css="isCss"
           v-bind:is-js="isJs"
           v-bind:is-vue="isVue"
+          is-horizontal
         ></TechnologyGroup>
       </div>
       <p v-if="clickable" class="typingEffect nowrap-text goToProject">> Go to project!</p>

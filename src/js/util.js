@@ -55,7 +55,7 @@ function updateSkills() {
 let scrolling = false;
 let scrollingList = [];
 let scrollingSlides;
-
+/*
 const sectionObserver = new IntersectionObserver((entries) => {
   for (const entry of entries) {
     if (entry.intersectionRatio >= 1) {
@@ -65,14 +65,14 @@ const sectionObserver = new IntersectionObserver((entries) => {
     }
   }
 });
-
+*/
 updateScrollingSlides();
 
 function updateScrollingSlides() {
   let previousSelected = scrollingList.find((e) => e.selected);
   if(previousSelected !== undefined){
     for (const scrollingElement of scrollingList) {
-      sectionObserver.unobserve(scrollingElement.element);
+      //sectionObserver.unobserve(scrollingElement.element);
     }
   }
   scrollingSlides = document.querySelectorAll(".scrolling-slide");
@@ -84,7 +84,7 @@ function updateScrollingSlides() {
       previousSelected = { element: slide, selected: isSelected };
     }
     scrollingList.push({ element: slide, selected: isSelected });
-    sectionObserver.observe(slide);
+    //sectionObserver.observe(slide);
   }
 }
 
@@ -106,6 +106,7 @@ function scrollToNextSection(forward) {
 }
 
 function scrollToPage(index, removeListeners) {
+  console.log(index + " " + scrollingList);
   if (!isOutOfBounds(scrollingList, index)) {
     if (removeListeners) {
       window.removeEventListener("wheel", activateScrollingEffect);
@@ -119,6 +120,7 @@ function scrollToPage(index, removeListeners) {
     }
     let elementToScroll = scrollingList[index].element;
     scrollingList[index].selected = true;
+    console.log(scrollingList);
     window.scrollTo(0, elementToScroll.offsetTop - headerHeight);
   }
 }

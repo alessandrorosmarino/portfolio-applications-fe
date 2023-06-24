@@ -4,7 +4,8 @@
     <div class="flex-centered dot" v-on:click="firstMethod();selected(0)">Presentation</div>
     <div class="flex-centered dot" v-on:click="secondMethod();selected(1)">Projects</div>
     <div class="flex-centered dot" v-on:click="thirdMethod();selected(2)">Work Experience</div>
-    <div class="flex-centered dot" v-on:click="fourthMethod();selected(3)">Skills & Education</div>
+    <div class="flex-centered dot" v-on:click="fourthMethod();selected(3)">Skills</div>
+    <div class="flex-centered dot" v-on:click="fifthMethod();selected(4)">Education</div>
     <div></div> <!-- empty div for grid -->
   </nav>
 </template>
@@ -18,6 +19,7 @@ defineProps({
   secondMethod: Function,
   thirdMethod: Function,
   fourthMethod: Function,
+  fifthMethod: Function,
 });
 
 function selected(index){
@@ -30,6 +32,6 @@ function selected(index){
 
 <style scoped>
 .navigator{
-  --number-of-navigation: 4;
+  --number-of-navigation: 5;
 }
 </style>
