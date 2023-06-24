@@ -4,15 +4,33 @@
     
     <!-- Backend -->
     <div v-if="backendTechnologies > 0" class="grid technology-category">
-      <div v-if="showCategoryText" class="flex-centered"> Backend Related Technical Skills </div>
+      <div v-if="showCategoryText" class="flex-centered"> Backend </div>
       <div class="grid backend-technologies">
         <div></div> <!-- Empty div to center the images -->
-        <img v-if="performCheck(isJava)" alt="Java" class="technology" src="../../assets/technologies/java.png" />
-        <img v-if="performCheck(isSpring)" alt="Spring" class="technology" src="../../assets/technologies/spring.svg" />
-        <img v-if="performCheck(isMaven)" alt="Maven" class="technology" src="../../assets/technologies/maven.svg" />
-        <img v-if="performCheck(isGradle)" alt="Gradle" class="technology" src="../../assets/technologies/gradle.svg" />
-        <img v-if="performCheck(isAws)" alt="AWS" class="technology" src="../../assets/technologies/aws.png" />
-        <img v-if="performCheck(isJunit)" alt="Junit" class="technology" src="../../assets/technologies/junit.png" />
+        <div v-if="performCheck(isJava)" class="flex-centered">
+          <img alt="Java" class="technology" src="../../assets/technologies/java.png" />
+        </div>
+        <div v-if="performCheck(isSpring)" class="flex-centered">
+          <img alt="Spring" class="technology" src="../../assets/technologies/spring.svg" />
+        </div>
+        <div v-if="performCheck(isHibernate)" class="flex-centered">
+          <img alt="Hibernate" class="technology" src="../../assets/technologies/hibernate.png" />
+        </div>
+        <div v-if="performCheck(isMaven)" class="flex-centered">
+          <img alt="Maven" class="technology" src="../../assets/technologies/maven.svg" />
+        </div>
+        <div v-if="performCheck(isGradle)" class="flex-centered">
+          <img alt="Gradle" class="technology" src="../../assets/technologies/gradle.svg" />
+        </div>
+        <div v-if="performCheck(isAws)" class="flex-centered">
+          <img alt="AWS" class="technology" src="../../assets/technologies/aws.png" />
+        </div>
+        <div v-if="performCheck(isJunit)" class="flex-centered">
+          <img alt="Junit" class="technology" src="../../assets/technologies/junit.png" />
+        </div>
+        <div v-if="performCheck(isRest)" class="flex-centered">
+          <img alt="REST" class="technology" src="../../assets/technologies/rest.png" />
+        </div>
         <div></div> <!-- Empty div to center the images -->
       </div>
     </div>
@@ -21,11 +39,18 @@
 
     <!-- Database -->
     <div v-if="databaseTechnologies > 0" class="grid technology-category">
-      <div v-if="showCategoryText" class="flex-centered"> Database Related Technical Skills </div>
+      <div v-if="showCategoryText" class="flex-centered"> Database </div>
       <div class="grid database-technologies">
         <div></div> <!-- Empty div to center the images -->
-        <img v-if="performCheck(isMySql)" alt="MySQL" class="technology" src="../../assets/technologies/mySQL.png" />
-        <img v-if="performCheck(isOracleDb)" alt="Oracle DB" class="technology" src="../../assets/technologies/oracleDB.png" />
+        <div v-if="performCheck(isMySql)" class="flex-centered">
+          <img alt="MySQL" class="technology" src="../../assets/technologies/mySQL.png" />
+        </div>
+        <div v-if="performCheck(isOracleDb)" class="flex-centered">
+          <img alt="Oracle DB" class="technology" src="../../assets/technologies/oracleDB.png" />
+        </div>
+        <div v-if="performCheck(isMariaDb)" class="flex-centered">
+          <img alt="MariaDB" class="technology" src="../../assets/technologies/mariaDB.svg" />
+        </div>
         <div></div> <!-- Empty div to center the images -->
       </div>
     </div>
@@ -34,15 +59,30 @@
 
     <!-- Frontend -->
     <div v-if="frontendTechnologies > 0" class="grid technology-category">
-      <div v-if="showCategoryText" class="flex-centered"> Frontend Related Technical Skills </div>
+      <div v-if="showCategoryText" class="flex-centered"> Frontend </div>
       <div class="grid frontend-technologies">
         <div></div> <!-- Empty div to center the images -->
-        <img v-if="performCheck(isVue)" alt="Vue" class="technology" src="../../assets/technologies/vue.png" />
-        <img v-if="performCheck(isAngular)" alt="Angular" class="technology" src="../../assets/technologies/angular.png" />
-        <img v-if="performCheck(isHtml)" alt="HTML5" class="technology" src="../../assets/technologies/html.png" />
-        <img v-if="performCheck(isCss)" alt="CSS3" class="technology" src="../../assets/technologies/css.png" />
-        <img v-if="performCheck(isJs)" alt="JS" class="technology" src="../../assets/technologies/js.png" />
-        <img v-if="performCheck(isBootstrap)" alt="Bootstrap" class="technology" src="../../assets/technologies/bootstrap.png" />
+        <div v-if="performCheck(isVue)" class="flex-centered">
+          <img alt="Vue" class="technology" src="../../assets/technologies/vue.png" />
+        </div>
+        <div v-if="performCheck(isAngular)" class="flex-centered">
+          <img alt="Angular" class="technology" src="../../assets/technologies/angular.png" />
+        </div>
+        <div v-if="performCheck(isHtml)" class="flex-centered">
+          <img alt="HTML5" class="technology" src="../../assets/technologies/html.png" />
+        </div>
+        <div v-if="performCheck(isCss)" class="flex-centered">
+          <img alt="CSS3" class="technology" src="../../assets/technologies/css.png" />
+        </div>
+        <div v-if="performCheck(isJs)" class="flex-centered">
+          <img alt="JS" class="technology" src="../../assets/technologies/js.png" />
+        </div>
+        <div v-if="performCheck(isBootstrap)" class="flex-centered">
+          <img alt="Bootstrap" class="technology" src="../../assets/technologies/bootstrap.png" />
+        </div>
+        <div v-if="performCheck(isJson)" class="flex-centered">
+          <img alt="JSON" class="technology" src="../../assets/technologies/JSON.svg" />
+        </div>
         <div></div> <!-- Empty div to center the images -->
       </div>
     </div>
@@ -51,17 +91,33 @@
 
     <!-- Tools -->
     <div v-if="toolsTechnologies > 0" class="grid technology-category">
-      <div v-if="showCategoryText" class="flex-centered"> Tools Related Technical Skills </div>
+      <div v-if="showCategoryText" class="flex-centered"> Tools </div>
       <div class="grid tools-technologies">
         <div></div> <!-- Empty div to center the images -->
-        <img v-if="performCheck(isGit)" alt="Git" class="technology" src="../../assets/technologies/git.png" />
-        <img v-if="performCheck(isGithub)" alt="Github" class="technology" src="../../assets/technologies/github.svg" />
-        <img v-if="performCheck(isJenkins)" alt="Jenkins" class="technology" src="../../assets/technologies/jenkins.png" />
-        <img v-if="performCheck(isJira)" alt="Jira" class="technology" src="../../assets/technologies/jira.svg" />
-        <img v-if="performCheck(isBitbucket)" alt="Bitbucket" class="technology" src="../../assets/technologies/bitbucket.svg" />
-        <img v-if="performCheck(isConfluence)" alt="Confluence" class="technology" src="../../assets/technologies/confluence.svg" />
-        <img v-if="performCheck(isSourceTree)" alt="SourceTree" class="technology" src="../../assets/technologies/sourcetree.svg" />
-        <img v-if="performCheck(isPostman)" alt="Postman" class="technology" src="../../assets/technologies/postman.svg" />
+        <div v-if="performCheck(isGit)" class="flex-centered">
+          <img alt="Git" class="technology" src="../../assets/technologies/git.png" />
+        </div>
+        <div v-if="performCheck(isGithub)" class="flex-centered">
+          <img alt="Github" class="technology" src="../../assets/technologies/github.svg" />
+        </div>
+        <div v-if="performCheck(isJenkins)" class="flex-centered">
+          <img alt="Jenkins" class="technology" src="../../assets/technologies/jenkins.png" />
+        </div>
+        <div v-if="performCheck(isJira)" class="flex-centered">
+          <img alt="Jira" class="technology" src="../../assets/technologies/jira.svg" />
+        </div>
+        <div v-if="performCheck(isBitbucket)" class="flex-centered">
+          <img alt="Bitbucket" class="technology" src="../../assets/technologies/bitbucket.svg" />
+        </div>
+        <div v-if="performCheck(isConfluence)" class="flex-centered">
+          <img alt="Confluence" class="technology" src="../../assets/technologies/confluence.svg" />
+        </div>
+        <div v-if="performCheck(isSourceTree)" class="flex-centered">
+          <img alt="SourceTree" class="technology" src="../../assets/technologies/sourcetree.svg" />
+        </div>
+        <div v-if="performCheck(isPostman)" class="flex-centered">
+          <img alt="Postman" class="technology" src="../../assets/technologies/postman.svg" />
+        </div>
         <div></div> <!-- Empty div to center the images -->
       </div>
     </div>
@@ -70,15 +126,27 @@
 
     <!-- IDEs -->
     <div v-if="ideTechnologies > 0" class="grid technology-category">
-      <div v-if="showCategoryText" class="flex-centered"> IDEs Related Technical Skills </div>
+      <div v-if="showCategoryText" class="flex-centered"> IDEs </div>
       <div class="grid ide-technologies">
         <div></div> <!-- Empty div to center the images -->
-        <img v-if="performCheck(isIntelliJ)" alt="IntelliJ" class="technology" src="../../assets/technologies/intelliJ.png" />
-        <img v-if="performCheck(isWebstorm)" alt="Webstorm" class="technology" src="../../assets/technologies/webStorm.png" />
-        <img v-if="performCheck(isEclipse)" alt="Eclipse" class="technology" src="../../assets/technologies/eclipse.png" />
-        <img v-if="performCheck(isVisualStudioCode)" alt="Visual Studio Code" class="technology" src="../../assets/technologies/visualStudioCode.svg" />
-        <img v-if="performCheck(isVisualStudio)" alt="Visual Studio" class="technology" src="../../assets/technologies/visualStudio.svg" />
-        <img v-if="performCheck(isUnity)" alt="Unity" class="technology" src="../../assets/technologies/unity.png" />
+        <div v-if="performCheck(isIntelliJ)" class="flex-centered">
+          <img alt="IntelliJ" class="technology" src="../../assets/technologies/intelliJ.png" />
+        </div>
+        <div v-if="performCheck(isWebstorm)" class="flex-centered">
+          <img alt="Webstorm" class="technology" src="../../assets/technologies/webStorm.png" />
+        </div>
+        <div v-if="performCheck(isEclipse)" class="flex-centered">
+          <img alt="Eclipse" class="technology" src="../../assets/technologies/eclipse.png" />
+        </div>
+        <div v-if="performCheck(isVisualStudioCode)" class="flex-centered">
+          <img alt="Visual Studio Code" class="technology" src="../../assets/technologies/visualStudioCode.svg" />
+        </div>
+        <div v-if="performCheck(isVisualStudio)" class="flex-centered">
+          <img alt="Visual Studio" class="technology" src="../../assets/technologies/visualStudio.svg" />
+        </div>
+        <div v-if="performCheck(isUnity)" class="flex-centered">
+          <img alt="Unity" class="technology" src="../../assets/technologies/unity.png" />
+        </div>
         <div></div> <!-- Empty div to center the images -->
       </div>
     </div>
@@ -87,14 +155,24 @@
 
     <!-- Servers -->
     <div v-if="serverTechnologies > 0" class="grid technology-category">
-      <div v-if="showCategoryText" class="flex-centered"> Servers Related Technical Skills </div>
+      <div v-if="showCategoryText" class="flex-centered"> Servers </div>
       <div class="grid server-technologies">
         <div></div> <!-- Empty div to center the images -->
-        <img v-if="performCheck(isDocker)" alt="Docker" class="technology" src="../../assets/technologies/docker.webp" />
-        <img v-if="performCheck(isNodeJs)" alt="NodeJs" class="technology" src="../../assets/technologies/nodeJS.png" />
-        <img v-if="performCheck(isNpm)" alt="Npm" class="technology" src="../../assets/technologies/npm.svg" />
-        <img v-if="performCheck(isTomcat)" alt="Tomcat" class="technology" src="../../assets/technologies/tomcat.png" />
-        <img v-if="performCheck(isJboss)" alt="Jboss" class="technology" src="../../assets/technologies/redHat.png" />
+        <div v-if="performCheck(isDocker)" class="flex-centered">
+          <img alt="Docker" class="technology" src="../../assets/technologies/docker.webp" />
+        </div>
+        <div v-if="performCheck(isNodeJs)" class="flex-centered">
+          <img alt="NodeJs" class="technology" src="../../assets/technologies/nodeJS.png" />
+        </div>
+        <div v-if="performCheck(isNpm)" class="flex-centered">
+          <img alt="Npm" class="technology" src="../../assets/technologies/npm.svg" />
+        </div>
+        <div v-if="performCheck(isTomcat)" class="flex-centered">
+          <img alt="Tomcat" class="technology" src="../../assets/technologies/tomcat.png" />
+        </div>
+        <div v-if="performCheck(isJboss)" class="flex-centered">
+          <img alt="Jboss" class="technology" src="../../assets/technologies/redHat.png" />
+        </div>
         <div></div> <!-- Empty div to center the images -->
       </div>
     </div>
@@ -145,6 +223,10 @@ const props = defineProps({
   isTomcat: Boolean,
   isJboss: Boolean,
   isUnity: Boolean,
+  isHibernate: Boolean,
+  isJson: Boolean,
+  isRest: Boolean,
+  isMariaDb: Boolean,
 });
 
 function performCheck(check){
@@ -160,6 +242,8 @@ function countBackendTechnologies(){
   if(performCheck(props.isGradle)) count++;
   if(performCheck(props.isAws)) count++;
   if(performCheck(props.isJunit)) count++;
+  if(performCheck(props.isHibernate)) count++;
+  if(performCheck(props.isRest)) count++;
   return count;
 }
 
@@ -168,6 +252,7 @@ function countDatabaseTechnologies(){
   let count = 0;
   if(performCheck(props.isMySql)) count++;
   if(performCheck(props.isOracleDb)) count++;
+  if(performCheck(props.isMariaDb)) count++;
   return count;
 }
 
@@ -180,6 +265,7 @@ function countFrontendTechnologies(){
   if(performCheck(props.isCss)) count++;
   if(performCheck(props.isBootstrap)) count++;
   if(performCheck(props.isJs)) count++;
+  if(performCheck(props.isJson)) count++;
   return count;
 }
 
@@ -220,7 +306,14 @@ function countServerTechnologies(){
   return count;
 }
 
-const numberOfSections = countNumberOfSections() + props.separated ? countNumberOfSections() - 1 : 0;
+let sectionGridTemplateColumns = "";
+for (let i = 0; i < countNumberOfSections(); i++) {
+  if(i!==0 && props.separated){
+    sectionGridTemplateColumns += "1px ";
+  }
+  sectionGridTemplateColumns += "1fr ";
+}
+
 function countNumberOfSections(){
   let count = 0;
   if(countBackendTechnologies() > 0) count++;
@@ -232,6 +325,8 @@ function countNumberOfSections(){
   return count;
 }
 
+const technologyCategoryRows = (props.showCategoryText? "1em" : "") + " 1fr";
+
 </script>
 
 <style scoped>
@@ -241,37 +336,36 @@ function countNumberOfSections(){
 
 .technology-category{
   --grid-n-column: 1fr;
-  --grid-n-row: 1em 1fr;
+  --grid-n-row: v-bind(technologyCategoryRows);
+}
+
+[class*="technologies"]{
+  grid-gap: 3px;
+  --grid-n-row: 1fr;
 }
 
 .backend-technologies{
   --grid-n-column: 1fr repeat(v-bind(backendTechnologies), var(--technology-icon)) 1fr;
-  --grid-n-row: 1fr;
 }
 
 .database-technologies{
   --grid-n-column: 1fr repeat(v-bind(databaseTechnologies), var(--technology-icon)) 1fr;
-  --grid-n-row: 1fr;
 }
 
 .frontend-technologies{
   --grid-n-column: 1fr repeat(v-bind(frontendTechnologies), var(--technology-icon)) 1fr;
-  --grid-n-row: 1fr;
 }
 
 .tools-technologies{
   --grid-n-column: 1fr repeat(v-bind(toolsTechnologies), var(--technology-icon)) 1fr;
-  --grid-n-row: 1fr;
 }
 
 .ide-technologies{
   --grid-n-column: 1fr repeat(v-bind(ideTechnologies), var(--technology-icon)) 1fr;
-  --grid-n-row: 1fr;
 }
 
 .server-technologies{
   --grid-n-column: 1fr repeat(v-bind(serverTechnologies), var(--technology-icon)) 1fr;
-  --grid-n-row: 1fr;
 }
 
 .technology {
@@ -280,8 +374,7 @@ function countNumberOfSections(){
 }
 
 .technology-group {
-  --number-of-sections: v-bind(numberOfSections);
-  --grid-n-column: var(--padding-space) repeat(var(--number-of-sections), 1fr) var(--padding-space);
+  --grid-n-column: var(--padding-space) v-bind(sectionGridTemplateColumns) var(--padding-space);
   --grid-n-row: 1fr;
 }
 </style>

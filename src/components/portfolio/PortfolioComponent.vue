@@ -99,10 +99,8 @@
 
     <!-- Tools -->
     <section class="tools grid scrolling-slide">
-      <div>All Technical Skills</div>
-      <div>
-        <TechnologyGroup is-all></TechnologyGroup>
-      </div>
+      <div class="flex-centered important-text">Technical Skills</div>
+      <TechnologyGroup is-all show-category-text separated></TechnologyGroup>
     </section>
 
     <!-- Skills -->
@@ -174,9 +172,10 @@ const pdf = require("../../assets/AlessandroRosmarinoCV.pdf");
 </script>
 
 <style scoped>
-.title {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+.important-text {
+  color: var(--color);
+  font-size: 2em;
+  font-weight: bold;
 }
 
 /* Start Main-container */
@@ -212,9 +211,10 @@ const pdf = require("../../assets/AlessandroRosmarinoCV.pdf");
 }
 
 .tools {
-  height: var(--half-height);
+  height: var(--quarter-height);
   --grid-n-column: 1fr;
-  --grid-n-row: 1fr 2fr;
+  --grid-n-row: 6em 1fr;
+  grid-gap: 20px;
 }
 
 .skills {

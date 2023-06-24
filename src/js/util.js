@@ -23,57 +23,9 @@ function addHoveredClass(element){
   element.classList.add("hovered");
 }
 
-/*
-  //Script for the slideshow behaviour
-  var prev = document.querySelector(".previous-button");
-  var next = document.querySelector(".next-button");
-  var slides = document.getElementsByClassName("slide");
-  var dots = document.getElementsByClassName("dot");
-  
-  prev.addEventListener("click", () =>{
-      nextSlide(false);
-  })
-  
-  next.addEventListener("click", () =>{
-      nextSlide(true);
-  })
-  
-  function nextSlide(direction){
-      var found = false;
-      var check = direction ? slides.length-1 : 0;
-      var index = direction ? -1 : slides.length;
-  
-      for (let i = 0; i < slides.length && !found; i++) {
-          if(slides[i].classList.contains("active")){
-              if(i === check){
-                  i = index;
-              }
-              selectSlide(direction?++i:--i);
-          }
-      }
-  }
-  
-  for (let i = 0; i < dots.length; i++) {
-      dots[i].addEventListener("click", () =>{
-          selectSlide(i);
-      })
-  }
-  
-  function selectSlide(index){
-      for (let i = 0; i < slides.length; i++) {
-          slides[i].classList.remove("active");
-      }
-      slides[index].classList.add("active");
-      for (let i = 0; i < dots.length; i++) {
-          dots[i].classList.remove("dot-selected");
-      }
-      dots[index].classList.add("dot-selected");
-  }
-  */
-
 /* Start skill appearing effect */
 
-var skills;
+let skills;
 
 const rotationObserver = new IntersectionObserver((entries) => {
   for (const entry of entries) {
