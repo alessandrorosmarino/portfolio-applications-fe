@@ -2,11 +2,7 @@
   <!-- Content -->
   <section class="main-container flex-vertical">
     <NavigatorComponent
-      :first-method="() => scrollToPage(0,false)"
-      :second-method="() => scrollToPage(1,false)"
-      :third-method="() => scrollToPage(2,false)"
-      :fourth-method="() => scrollToPage(3,false)"
-      :fifth-method="() => scrollToPage(4,false)"
+      :navigations="navigations"
     ></NavigatorComponent>
     <!-- Presentation -->
     <section class="presentation grid scrolling-slide">
@@ -155,22 +151,59 @@ import PortfolioProject from "@/components/portfolio/PortfolioProject";
 import NavigatorComponent from "@/components/portfolio/NavigatorComponent";
 import TechnologyGroup from "@/components/portfolio/TechnologyGroup";
 
-let scrollToPage;
-onMounted(() => {
-  import("../../js/util.js").then((module) => {
-    scrollToPage = module.scrollToPage;
-    module.updateAllEntities();
-  });
+const emits = defineEmits(["triggerRouter"]);
+const pdf = require("../../assets/AlessandroRosmarinoCV.pdf");
+const rotationObserver = new IntersectionObserver((entries) => {
+  for (const entry of entries) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("rotate");
+    } else {
+      entry.target.classList.remove("rotate");
+    }
+  }
 });
 
+let navigations = [ "Presentation", "Projects", "Work Experience", "Skills", "Education" ];
+let scrollToPage;
+let fadeInEffects;
+let skills;
 
-const emits = defineEmits(["triggerRouter"]);
+onMounted(() => {
+  updateFadeInEffects();
+  updateSkills();
+})
 
 function emitRouter(path) {
   emits("triggerRouter", path);
 }
 
-const pdf = require("../../assets/AlessandroRosmarinoCV.pdf");
+function updateFadeInEffects() {
+  if(fadeInEffects !== undefined){
+    for (const fadeInEffect of fadeInEffects) {
+      fadeInEffect.removeEventListener("mouseover", addHoveredClass.bind(null, fadeInEffect));
+    }
+  }
+  fadeInEffects = document.querySelectorAll(".fade-in-side-lines");
+  for (let i = 0; i < fadeInEffects.length; i++) {
+    fadeInEffects[i].addEventListener("mouseover", addHoveredClass.bind(null, fadeInEffects[i]));
+  }
+}
+
+function addHoveredClass(element){
+  element.classList.add("hovered");
+}
+
+function updateSkills() {
+  if(skills !== undefined){
+    for (const skill of skills) {
+      rotationObserver.unobserve(skill);
+    }
+  }
+  skills = document.querySelectorAll(".pointer-container");
+  for (const skill of skills) {
+    rotationObserver.observe(skill);
+  }
+}
 </script>
 
 <style scoped>
