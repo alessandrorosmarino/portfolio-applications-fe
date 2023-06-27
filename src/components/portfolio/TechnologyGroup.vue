@@ -7,34 +7,34 @@
       <div class="grid backend-technologies">
         <div></div> <!-- Empty div to center the images -->
         <div v-if="performCheck(isJava)" class="flex-centered">
-          <img alt="Java" class="technology" src="../../assets/technologies/java.png" />
+          <img alt="Java" class="technology" title="Java" src="../../assets/technologies/java.png" />
         </div>
         <div v-if="performCheck(isSpring)" class="flex-centered">
-          <img alt="Spring" class="technology" src="../../assets/technologies/spring.svg" />
+          <img alt="Spring" class="technology" title="Spring" src="../../assets/technologies/spring.svg" />
         </div>
         <div v-if="performCheck(isHibernate)" class="flex-centered">
-          <img alt="Hibernate" class="technology" src="../../assets/technologies/hibernate.png" />
+          <img alt="Hibernate" class="technology" title="Hibernate" src="../../assets/technologies/hibernate.png" />
         </div>
         <div v-if="performCheck(isMaven)" class="flex-centered">
-          <img alt="Maven" class="technology" src="../../assets/technologies/maven.svg" />
+          <img alt="Maven" class="technology" title="Maven" src="../../assets/technologies/maven.svg" />
         </div>
         <div v-if="performCheck(isGradle)" class="flex-centered">
-          <img alt="Gradle" class="technology" src="../../assets/technologies/gradle.svg" />
+          <img alt="Gradle" class="technology" title="Gradle" src="../../assets/technologies/gradle.svg" />
         </div>
         <div v-if="performCheck(isAws)" class="flex-centered">
-          <img alt="AWS" class="technology" src="../../assets/technologies/aws.png" />
+          <img alt="AWS" class="technology" title="AWS" src="../../assets/technologies/aws.png" />
         </div>
         <div v-if="performCheck(isJunit)" class="flex-centered">
-          <img alt="Junit" class="technology" src="../../assets/technologies/junit.png" />
+          <img alt="JUnit" class="technology" title="JUnit 5" src="../../assets/technologies/junit.png" />
         </div>
         <div v-if="performCheck(isRest)" class="flex-centered">
-          <img alt="REST" class="technology" src="../../assets/technologies/rest.png" />
+          <img alt="REST" class="technology" title="REST" src="../../assets/technologies/rest.png" />
         </div>
         <div></div> <!-- Empty div to center the images -->
       </div>
     </div>
 
-    <div v-if="separated" class="separator"></div> <!-- Divisor -->
+    <div v-if="categorySeparated" class="separator"></div> <!-- Divisor -->
 
     <!-- Database -->
     <div v-if="databaseTechnologies > 0" class="grid technology-category">
@@ -42,19 +42,19 @@
       <div class="grid database-technologies">
         <div></div> <!-- Empty div to center the images -->
         <div v-if="performCheck(isMySql)" class="flex-centered">
-          <img alt="MySQL" class="technology" src="../../assets/technologies/mySQL.png" />
+          <img alt="MySQL" class="technology" title="MySQL" src="../../assets/technologies/mySQL.png" />
         </div>
         <div v-if="performCheck(isOracleDb)" class="flex-centered">
-          <img alt="Oracle DB" class="technology" src="../../assets/technologies/oracleDB.png" />
+          <img alt="Oracle DB" class="technology" title="Oracle DB" src="../../assets/technologies/oracleDB.png" />
         </div>
         <div v-if="performCheck(isMariaDb)" class="flex-centered">
-          <img alt="MariaDB" class="technology" src="../../assets/technologies/mariaDB.svg" />
+          <img alt="MariaDB" class="technology" title="MariaDB" src="../../assets/technologies/mariaDB.svg" />
         </div>
         <div></div> <!-- Empty div to center the images -->
       </div>
     </div>
 
-    <div v-if="separated" class="separator"></div> <!-- Divisor -->
+    <div v-if="categorySeparated" class="separator"></div> <!-- Divisor -->
 
     <!-- Frontend -->
     <div v-if="frontendTechnologies > 0" class="grid technology-category">
@@ -62,31 +62,31 @@
       <div class="grid frontend-technologies">
         <div></div> <!-- Empty div to center the images -->
         <div v-if="performCheck(isVue)" class="flex-centered">
-          <img alt="Vue" class="technology" src="../../assets/technologies/vue.png" />
+          <img alt="Vue" class="technology" title="Vue" src="../../assets/technologies/vue.png" />
         </div>
         <div v-if="performCheck(isAngular)" class="flex-centered">
-          <img alt="Angular" class="technology" src="../../assets/technologies/angular.png" />
+          <img alt="Angular" class="technology" title="Angular" src="../../assets/technologies/angular.png" />
         </div>
         <div v-if="performCheck(isHtml)" class="flex-centered">
-          <img alt="HTML5" class="technology" src="../../assets/technologies/html.png" />
+          <img alt="HTML 5" class="technology" title="HTML 5" src="../../assets/technologies/html.png" />
         </div>
         <div v-if="performCheck(isCss)" class="flex-centered">
-          <img alt="CSS3" class="technology" src="../../assets/technologies/css.png" />
+          <img alt="CSS 3" class="technology" title="CSS 3" src="../../assets/technologies/css.png" />
         </div>
         <div v-if="performCheck(isJs)" class="flex-centered">
-          <img alt="JS" class="technology" src="../../assets/technologies/js.png" />
+          <img alt="JS" class="technology" title="Javascript" src="../../assets/technologies/js.png" />
         </div>
         <div v-if="performCheck(isBootstrap)" class="flex-centered">
-          <img alt="Bootstrap" class="technology" src="../../assets/technologies/bootstrap.png" />
+          <img alt="Bootstrap" class="technology" title="Bootstrap" src="../../assets/technologies/bootstrap.png" />
         </div>
         <div v-if="performCheck(isJson)" class="flex-centered">
-          <img alt="JSON" class="technology" src="../../assets/technologies/JSON.svg" />
+          <img alt="JSON" class="technology" title="JSON" src="../../assets/technologies/JSON.svg" />
         </div>
         <div></div> <!-- Empty div to center the images -->
       </div>
     </div>
 
-    <div v-if="separated" class="separator"></div> <!-- Divisor -->
+    <div v-if="categorySeparated" class="separator"></div> <!-- Divisor -->
 
     <!-- Tools -->
     <div v-if="toolsTechnologies > 0" class="grid technology-category">
@@ -94,34 +94,34 @@
       <div class="grid tools-technologies">
         <div></div> <!-- Empty div to center the images -->
         <div v-if="performCheck(isGit)" class="flex-centered">
-          <img alt="Git" class="technology" src="../../assets/technologies/git.png" />
+          <img alt="Git" class="technology" title="Git" src="../../assets/technologies/git.png" />
         </div>
         <div v-if="performCheck(isGithub)" class="flex-centered">
-          <img alt="Github" class="technology" src="../../assets/technologies/github.svg" />
+          <img alt="Github" class="technology" title="GitHub" src="../../assets/technologies/github.svg" />
         </div>
         <div v-if="performCheck(isJenkins)" class="flex-centered">
-          <img alt="Jenkins" class="technology" src="../../assets/technologies/jenkins.png" />
+          <img alt="Jenkins" class="technology" title="Jenkins" src="../../assets/technologies/jenkins.png" />
         </div>
         <div v-if="performCheck(isJira)" class="flex-centered">
-          <img alt="Jira" class="technology" src="../../assets/technologies/jira.svg" />
+          <img alt="Jira" class="technology" title="Jira" src="../../assets/technologies/jira.svg" />
         </div>
         <div v-if="performCheck(isBitbucket)" class="flex-centered">
-          <img alt="Bitbucket" class="technology" src="../../assets/technologies/bitbucket.svg" />
+          <img alt="Bitbucket" class="technology" title="Bitbucket" src="../../assets/technologies/bitbucket.svg" />
         </div>
         <div v-if="performCheck(isConfluence)" class="flex-centered">
-          <img alt="Confluence" class="technology" src="../../assets/technologies/confluence.svg" />
+          <img alt="Confluence" class="technology" title="Confluence" src="../../assets/technologies/confluence.svg" />
         </div>
         <div v-if="performCheck(isSourceTree)" class="flex-centered">
-          <img alt="SourceTree" class="technology" src="../../assets/technologies/sourcetree.svg" />
+          <img alt="SourceTree" class="technology" title="SourceTree" src="../../assets/technologies/sourcetree.svg" />
         </div>
         <div v-if="performCheck(isPostman)" class="flex-centered">
-          <img alt="Postman" class="technology" src="../../assets/technologies/postman.svg" />
+          <img alt="Postman" class="technology" title="Postman" src="../../assets/technologies/postman.svg" />
         </div>
         <div></div> <!-- Empty div to center the images -->
       </div>
     </div>
 
-    <div v-if="separated" class="separator"></div> <!-- Divisor -->
+    <div v-if="categorySeparated" class="separator"></div> <!-- Divisor -->
 
     <!-- IDEs -->
     <div v-if="ideTechnologies > 0" class="grid technology-category">
@@ -129,28 +129,28 @@
       <div class="grid ide-technologies">
         <div></div> <!-- Empty div to center the images -->
         <div v-if="performCheck(isIntelliJ)" class="flex-centered">
-          <img alt="IntelliJ" class="technology" src="../../assets/technologies/intelliJ.png" />
+          <img alt="IntelliJ" class="technology" title="IntelliJ" src="../../assets/technologies/intelliJ.png" />
         </div>
         <div v-if="performCheck(isWebstorm)" class="flex-centered">
-          <img alt="Webstorm" class="technology" src="../../assets/technologies/webStorm.png" />
+          <img alt="Webstorm" class="technology" title="Webstorm" src="../../assets/technologies/webStorm.png" />
         </div>
         <div v-if="performCheck(isEclipse)" class="flex-centered">
-          <img alt="Eclipse" class="technology" src="../../assets/technologies/eclipse.png" />
+          <img alt="Eclipse" class="technology" title="Eclipse" src="../../assets/technologies/eclipse.png" />
         </div>
         <div v-if="performCheck(isVisualStudioCode)" class="flex-centered">
-          <img alt="Visual Studio Code" class="technology" src="../../assets/technologies/visualStudioCode.svg" />
+          <img alt="VS Code" class="technology" title="Visual Studio Code" src="../../assets/technologies/visualStudioCode.svg" />
         </div>
         <div v-if="performCheck(isVisualStudio)" class="flex-centered">
-          <img alt="Visual Studio" class="technology" src="../../assets/technologies/visualStudio.svg" />
+          <img alt="VS" class="technology" title="Visual Studio" src="../../assets/technologies/visualStudio.svg" />
         </div>
         <div v-if="performCheck(isUnity)" class="flex-centered">
-          <img alt="Unity" class="technology" src="../../assets/technologies/unity.png" />
+          <img alt="Unity" class="technology" title="Unity" src="../../assets/technologies/unity.png" />
         </div>
         <div></div> <!-- Empty div to center the images -->
       </div>
     </div>
 
-    <div v-if="separated" class="separator"></div> <!-- Divisor -->
+    <div v-if="categorySeparated" class="separator"></div> <!-- Divisor -->
 
     <!-- Servers -->
     <div v-if="serverTechnologies > 0" class="grid technology-category">
@@ -158,19 +158,19 @@
       <div class="grid server-technologies">
         <div></div> <!-- Empty div to center the images -->
         <div v-if="performCheck(isDocker)" class="flex-centered">
-          <img alt="Docker" class="technology" src="../../assets/technologies/docker.webp" />
+          <img alt="Docker" class="technology" title="Docker" src="../../assets/technologies/docker.webp" />
         </div>
         <div v-if="performCheck(isNodeJs)" class="flex-centered">
-          <img alt="NodeJs" class="technology" src="../../assets/technologies/nodeJS.png" />
+          <img alt="NodeJs" class="technology" title="NodeJs" src="../../assets/technologies/nodeJS.png" />
         </div>
         <div v-if="performCheck(isNpm)" class="flex-centered">
-          <img alt="Npm" class="technology" src="../../assets/technologies/npm.svg" />
+          <img alt="Npm" class="technology" title="Npm" src="../../assets/technologies/npm.svg" />
         </div>
         <div v-if="performCheck(isTomcat)" class="flex-centered">
-          <img alt="Tomcat" class="technology" src="../../assets/technologies/tomcat.png" />
+          <img alt="Tomcat" class="technology" title="Tomcat" src="../../assets/technologies/tomcat.png" />
         </div>
         <div v-if="performCheck(isJboss)" class="flex-centered">
-          <img alt="Jboss" class="technology" src="../../assets/technologies/redHat.png" />
+          <img alt="Jboss" class="technology" title="JBoss" src="../../assets/technologies/redHat.png" />
         </div>
         <div></div> <!-- Empty div to center the images -->
       </div>
@@ -185,7 +185,8 @@ import { defineProps } from "vue";
 const props = defineProps({
   isVertical: Boolean,
   isHorizontal: Boolean,
-  separated:Boolean,
+  categorySeparated: Boolean,
+  technologyGap: Boolean,
   showCategoryText: Boolean,
 
   isAll: Boolean,
@@ -228,6 +229,8 @@ const props = defineProps({
   isRest: Boolean,
   isMariaDb: Boolean,
 });
+
+let technologyGap = props.technologyGap ? "30px" : "0";
 
 function performCheck(check){
   return props.isAll || check;
@@ -308,7 +311,7 @@ function countServerTechnologies(){
 
 let sectionGridTemplateColumns = "";
 for (let i = 0; i < countNumberOfSections(); i++) {
-  if(i!==0 && props.separated){
+  if(i!==0 && props.categorySeparated){
     sectionGridTemplateColumns += "1px ";
   }
   sectionGridTemplateColumns += "1fr ";
@@ -350,7 +353,7 @@ if (props.isHorizontal) {
 }
 
 [class*="technologies"]{
-  grid-gap: 30px;
+  grid-gap: v-bind(technologyGap);
   --grid-n-row: 1fr;
 }
 

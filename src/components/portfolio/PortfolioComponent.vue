@@ -98,7 +98,7 @@
     <!-- Tools -->
     <section class="tools grid scrolling-slide">
       <!--div class="flex-centered important-text">My Skills</div-->
-      <TechnologyGroup is-all show-category-text is-vertical></TechnologyGroup>
+      <TechnologyGroup is-all show-category-text is-vertical technology-gap></TechnologyGroup>
     </section>
 
     <!-- Skills -->
