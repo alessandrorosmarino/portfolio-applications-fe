@@ -1,6 +1,6 @@
 <template>
   <div class="flex-vertical">
-    <div v-on:click="emitRouter()"
+    <div v-on:click="emitRouter(this)"
       class="flex-vertical flex-centered fade-in-side-lines project" v-bind:class="clickable ? 'mouse-pointer' : '' "
     >
       <div class="flex-centered flex-vertical">
@@ -43,12 +43,18 @@ const props = defineProps({
   isJs: Boolean,
   isVue: Boolean,
   routerPath: String,
+  routerTitle: String,
 });
 
-const emits = defineEmits(["triggerRouter"]);
+defineEmits(["triggerRouter"]);
 
-function emitRouter() {
-  emits("triggerRouter", props.routerPath);
+function emitRouter(toRoot) {
+  if (props.clickable) {
+    while (toRoot){
+      toRoot.$emit("triggerRouter", props.routerPath, props.routerTitle);
+      toRoot = toRoot.$parent;
+    }
+  }
 }
 </script>
 

@@ -42,33 +42,22 @@
     <!-- Projects -->
     <section class="project-table grid scrolling-slide">
       <PortfolioProject link="https://github.com/alessandrorosmarino/portfolio-applications-fe" is-vue isHtml isCss isJs
-                        router-path="" @triggerRouter="emitRouter" clickable>
+                        router-path="" router-title="Alessandro's Portfolio" clickable>
         Single Page Application (This whole project)
       </PortfolioProject>
-      <PortfolioProject link="https://github.com/alessandrorosmarino/Wrapper" isJava
-                        router-path="wrapper" @triggerRouter="">
+      <PortfolioProject link="https://github.com/alessandrorosmarino/Wrapper" isJava>
         Dependency Injector
       </PortfolioProject>
       <PortfolioProject link="https://github.com/alessandrorosmarino/task-reminder-be" is-java is-spring
-                        router-path="taskReminder" @triggerRouter="emitRouter" clickable>
+                        router-path="taskReminder" router-title="Task Reminder" clickable>
         Task Reminder
       </PortfolioProject>
       <PortfolioProject link="https://github.com/alessandrorosmarino/Play-Performance"
-                        isJava
-                        isSpring
-                        isMySql
-                        isAngular
-                        isHtml
-                        isCss
-                        isJs
-                        router-path="playPerformance"
-                        @triggerRouter=""
-      >
+                        isJava isSpring isMySql isAngular isHtml isCss isJs>
         Play Performance
       </PortfolioProject>
       <div></div> <!-- Empty div to fill the grid -->
-      <PortfolioProject link="https://github.com/alessandrorosmarino/portfolio" isHtml isCss isJs
-        router-path="portfolio" @triggerRouter="">
+      <PortfolioProject link="https://github.com/alessandrorosmarino/portfolio" isHtml isCss isJs>
         Portfolio
       </PortfolioProject>
     </section>
@@ -143,7 +132,7 @@
 </template>
 
 <script setup>
-import { defineEmits, onMounted } from "vue";
+import { onMounted } from "vue";
 import ProgressBar from "@/components/portfolio/ProgressBar";
 import EducationPath from "@/components/portfolio/EducationPath";
 import WorkingExperience from "@/components/portfolio/WorkingExperience";
@@ -151,7 +140,6 @@ import PortfolioProject from "@/components/portfolio/PortfolioProject";
 import NavigatorComponent from "@/components/portfolio/NavigatorComponent";
 import TechnologyGroup from "@/components/portfolio/TechnologyGroup";
 
-const emits = defineEmits(["triggerRouter"]);
 const pdf = require("../../assets/AlessandroRosmarinoCV.pdf");
 const rotationObserver = new IntersectionObserver((entries) => {
   for (const entry of entries) {
@@ -172,10 +160,6 @@ onMounted(() => {
   updateFadeInEffects();
   updateSkills();
 })
-
-function emitRouter(path) {
-  emits("triggerRouter", path);
-}
 
 function updateFadeInEffects() {
   if(fadeInEffects !== undefined){
@@ -253,7 +237,7 @@ function updateSkills() {
 }
 
 .education {
-  height: var(--quarter-height-heading);
+  height: var(--quarter-height);
   --grid-n-column: 1fr 1fr 1fr 1fr;
   --grid-n-row: 1fr;
   color: var(--text-color);

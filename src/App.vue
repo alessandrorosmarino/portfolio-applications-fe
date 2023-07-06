@@ -26,8 +26,9 @@ import router from "@/router";
 
 let title = ref("Alessandro's Portfolio");
 
-function goToRoute(path) {
+function goToRoute(path, titleValue) {
   router.push("/" + path);
+  title.value = titleValue;
 }
 </script>
 
