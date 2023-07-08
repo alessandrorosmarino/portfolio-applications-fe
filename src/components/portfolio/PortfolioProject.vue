@@ -1,6 +1,6 @@
 <template>
   <div class="flex-vertical">
-    <div v-on:click="emitRouter(this)"
+    <div v-on:click="emitRouter(self)"
       class="flex-vertical flex-centered fade-in-side-lines project" v-bind:class="clickable ? 'mouse-pointer' : '' "
     >
       <div class="flex-centered flex-vertical">
@@ -28,8 +28,10 @@
 </template>
 
 <script setup>
-import { defineEmits, defineProps } from "vue";
+import {defineEmits, defineProps, getCurrentInstance} from "vue";
 import TechnologyGroup from "@/components/portfolio/TechnologyGroup";
+
+let self = getCurrentInstance();
 
 const props = defineProps({
   clickable: Boolean,
@@ -49,14 +51,10 @@ const props = defineProps({
 defineEmits(["triggerRouter"]);
 
 function emitRouter(toRoot) {
-  console.log("emitting");
   if (props.clickable) {
-    console.log("clickable: " + props.clickable)
-    console.log("object: " + toRoot)
     while (toRoot){
-      console.log("emitting to parent");
-      toRoot.$emit("triggerRouter", props.routerPath, props.routerTitle);
-      toRoot = toRoot.$parent;
+      toRoot.emit("triggerRouter", props.routerPath, props.routerTitle);
+      toRoot = toRoot.parent;
     }
   }
 }
