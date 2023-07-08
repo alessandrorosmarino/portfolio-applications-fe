@@ -51,6 +51,7 @@ defineEmits(["triggerRouter"]);
 function emitRouter(toRoot) {
   console.log("emitting");
   if (props.clickable) {
+    console.log("clickable: " + props.clickable)
     while (toRoot){
       console.log("emitting to parent");
       toRoot.$emit("triggerRouter", props.routerPath, props.routerTitle);
