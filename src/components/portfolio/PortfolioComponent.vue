@@ -11,7 +11,6 @@
       </div>
       <div class="flex-centered flex-vertical">
         <p class="job-title">Java developer</p>
-        <p class="divisor"></p>
         <p class="nowrap-text">
           Passionate developer specialized in Java (8, 11, 17) and Spring Framework
           (Boot, Security, Data, Batch, Web).
@@ -25,13 +24,30 @@
           Familiarity with Git, Atlassian tools, Jenkins and many more tools.
         </p>
         <p class="divisor"></p>
+        <div class="flex-centered important-text"> What can I do for you? </div>
+        <div class="services-offered grid">
+          <p class="flex-centered nowrap-text">
+            I offer my services as a freelance developer for your projects.
+          </p>
+          <p class="flex-centered nowrap-text">
+            I can develop web applications, desktop applications and more.
+          </p>
+          <p class="flex-centered nowrap-text">
+            I can setup an automated build and deploy pipeline.
+          </p>
+          <p class="flex-centered nowrap-text">
+            I offer my services as a consultant.
+          </p>
+          <p class="flex-centered nowrap-text">
+            Contact me for more information.
+          </p>
+        </div>
         <div class="button-group">
           <button
             onclick="location.href='mailTo://alessandrorosmarino@gmail.com'"
           >
             Contact Me
           </button>
-          <button v-on:click="scrollToPage(1, false)">My Projects</button>
           <a v-bind:href="pdf.default" download="Alessandro Rosmarino CV.pdf" class="button">
             Download my CV
           </a>
@@ -152,7 +168,6 @@ const rotationObserver = new IntersectionObserver((entries) => {
 });
 
 let navigations = [ "Presentation", "Projects", "Work Experience", "Skills", "Education" ];
-let scrollToPage;
 let fadeInEffects;
 let skills;
 
@@ -214,7 +229,9 @@ function updateSkills() {
 }
 
 .job-title {
-  font-size: 4em;
+  font-size: 3.5em;
+  margin-top: var(--divisor-space);
+  margin-bottom: var(--divisor-space);
   color: var(--color);
 }
 
@@ -247,6 +264,12 @@ function updateSkills() {
   height: var(--full-height-heading);
   --grid-n-row: 1fr 1fr 1fr;
   --grid-n-column: 1fr;
+  color: var(--text-color);
+}
+
+.services-offered{
+  --grid-n-column: 1fr;
+  --grid-n-row: 1fr 1fr 1fr 1fr 1fr;
   color: var(--text-color);
 }
 </style>
