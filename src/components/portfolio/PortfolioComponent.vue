@@ -69,7 +69,8 @@
         Task Reminder
       </PortfolioProject>
       <PortfolioProject link="https://github.com/alessandrorosmarino/Play-Performance"
-                        isJava isSpring isMySql isAngular isHtml isCss isJs>
+                        isJava isSpring isMySql isAngular isHtml isCss isJs clickable
+                        router-path="playPerformance" router-title="Play Performance">
         Play Performance
       </PortfolioProject>
       <div></div> <!-- Empty div to fill the grid -->

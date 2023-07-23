@@ -40,7 +40,7 @@
 
 <script setup>
 import { defineProps, defineEmits, ref } from "vue";
-import { deleteReminder, updateReminder } from "@/js/reminderService";
+import { deleteReminder, updateReminder } from "@/js/services/reminderService";
 import GroupButton from "@/components/GroupButton";
 
 let props = defineProps({

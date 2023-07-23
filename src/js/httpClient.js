@@ -47,4 +47,12 @@ function getEntity(url, responseFunction, dataFunction) {
   httpCall(url, httpOptions, responseFunction, dataFunction);
 }
 
-export { deleteEntity, updateEntity, saveEntity, getEntity };
+function joinPaths() {
+  let array = [];
+  for (const argument of arguments) {
+    array.push(argument);
+  }
+  return array.join("/");
+}
+
+export { deleteEntity, updateEntity, saveEntity, getEntity, joinPaths };

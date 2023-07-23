@@ -3,6 +3,7 @@ import {
   saveEntity,
   deleteEntity,
   updateEntity,
+  joinPaths,
 } from "@/js/httpClient";
 
 let basePath = "reminders";
@@ -25,14 +26,6 @@ function deleteReminder(id, responseCallback, dataCallback) {
 
 function updateReminder(id, responseCallback, dataCallback, json) {
   updateEntity(joinPaths(basePath, id), responseCallback, dataCallback, json);
-}
-
-function joinPaths() {
-  let array = [];
-  for (const argument of arguments) {
-    array.push(argument);
-  }
-  return array.join("/");
 }
 
 export {

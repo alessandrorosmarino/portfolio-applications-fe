@@ -4,14 +4,14 @@ import PortfolioView from "../views/PortfolioView.vue";
 const routes = [
   {
     path: "/",
-    name: "portfolio",
+    name: "Portfolio",
     component: PortfolioView,
   },
   {
-    path: "/about",
-    name: "about",
+    path: "/playPerformance",
+    name: "Play Performance",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+      import(/* webpackChunkName: "about" */ "../views/GamificationView.vue"),
   },
   {
     path: "/taskReminder",

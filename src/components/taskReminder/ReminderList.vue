@@ -28,7 +28,7 @@
 <script setup>
 import { ref } from "vue";
 import ReminderCard from "@/components/taskReminder/ReminderCard";
-import { getReminders } from "@/js/reminderService";
+import { getReminders } from "@/js/services/reminderService";
 
 const reminders = ref([]);
 

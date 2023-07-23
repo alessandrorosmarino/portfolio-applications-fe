@@ -51,7 +51,7 @@
 
 <script setup>
 import { ref } from "vue";
-import { saveReminder } from "@/js/reminderService";
+import { saveReminder } from "@/js/services/reminderService";
 
 const reminderText = ref("");
 const reminderTime = ref("");
